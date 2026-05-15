@@ -92,6 +92,12 @@
     .profile dd { margin: 0; font-weight: 700; color: #3d3438; }
     .linklist { display: flex; flex-wrap: wrap; gap: 10px; }
     .linkpill { padding: 10px 13px; border: 1px solid #d8e5ef; border-radius: 12px; background: #f3f8fb; color: #52687a; font-weight: 700; text-decoration: none; }
+    .shorts-list { display: grid; gap: 12px; }
+    .shorts-item { padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #fffafd; }
+    .shorts-item h3 { margin: 0 0 8px; font-size: 1rem; line-height: 1.45; }
+    .shorts-link { display: inline-flex; margin: 8px 0; color: #516f88; font-weight: 800; text-decoration: none; border-bottom: 1px solid rgba(81, 111, 136, .28); }
+    .shorts-link:hover { border-color: #516f88; }
+    .shorts-note { margin: 8px 0 0; color: var(--muted); font-size: .94rem; line-height: 1.65; }
     .today { border-color: #efd0da; background: linear-gradient(135deg, #fff0f4, #ffffff 68%); }
     .note { border-left: 6px solid var(--sky); }
     footer { padding: 34px 0 0; color: var(--muted); text-align: center; font-size: .92rem; }
@@ -233,7 +239,13 @@
 
       <article class="card">
         <h2>登場Shorts</h2>
-        <p><strong>ルミマカロン、安全カードがクリームに並びすぎる</strong><br>明るい機内で、安全カードがルミのクリーム層にきれいに並びすぎる、小さくかわいい接客トラブル。</p>
+        <div class="shorts-list">
+          <div class="shorts-item">
+            <h3>ルミマカロン、安全カードがクリームに並びすぎる</h3>
+            <a class="shorts-link" href="https://youtube.com/shorts/6AmzsmdGsVU" target="_blank" rel="noopener noreferrer">YouTube Shortsを見る</a>
+            <p class="shorts-note">明るい機内で、安全カードがルミのクリーム層にきれいに並びすぎる、小さくかわいい接客トラブル。</p>
+          </div>
+        </div>
       </article>
 
       <article class="card wide">

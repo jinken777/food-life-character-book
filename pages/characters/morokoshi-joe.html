@@ -91,6 +91,13 @@
     .profile dd { margin: 0; font-weight: 700; color: #3d342c; }
     .linklist { display: flex; flex-wrap: wrap; gap: 10px; }
     .linkpill { padding: 10px 13px; border: 1px solid #dce5cf; border-radius: 12px; background: #f5f8ef; color: #596842; font-weight: 700; text-decoration: none; }
+    .shorts-list { display: grid; gap: 12px; }
+    .shorts-item { padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #fffbf2; }
+    .shorts-item h3 { margin: 0 0 8px; font-size: 1rem; line-height: 1.45; }
+    .shorts-link { display: inline-flex; margin: 8px 0; color: #6b7442; font-weight: 800; text-decoration: none; border-bottom: 1px solid rgba(107, 116, 66, .28); }
+    .shorts-link:hover { border-color: #6b7442; }
+    .shorts-note { margin: 8px 0 0; color: var(--muted); font-size: .94rem; line-height: 1.65; }
+    .shorts-missing { display: inline-flex; margin: 8px 0; padding: 7px 10px; border-radius: 999px; background: #f7f2e4; color: var(--muted); font-size: .9rem; font-weight: 700; }
     .today { border-color: #efd09a; background: linear-gradient(135deg, #fff0c9, #ffffff 68%); }
     .note { border-left: 6px solid var(--husk); }
     footer { padding: 34px 0 0; color: var(--muted); text-align: center; font-size: .92rem; }
@@ -232,7 +239,13 @@
 
       <article class="card">
         <h2>登場Shorts</h2>
-        <p><strong>もろこしジョー、応援カードがあふれる</strong><br>夕方の商店街で、ギターケースに応援カードが入りすぎる温かい路上ライブ回。</p>
+        <div class="shorts-list">
+          <div class="shorts-item">
+            <h3>もろこしジョー、応援カードがあふれる</h3>
+            <a class="shorts-link" href="https://youtube.com/shorts/2ky5xmG8aZw" target="_blank" rel="noopener noreferrer">YouTube Shortsを見る</a>
+            <p class="shorts-note">夕方の商店街で、ギターケースに応援カードが入りすぎる温かい路上ライブ回。</p>
+          </div>
+        </div>
       </article>
 
       <article class="card wide">
