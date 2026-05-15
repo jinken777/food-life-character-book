@@ -179,38 +179,42 @@
       font-size: 1.02rem;
     }
 
-    .creation-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+    .manifesto {
+      max-width: 780px;
+      margin-top: 28px;
     }
 
-    .creation-card {
-      padding: 18px;
+    .manifesto-block {
+      padding: clamp(22px, 4vw, 34px);
       border: 1px solid var(--line);
-      border-radius: 14px;
-      background: rgba(255, 250, 241, .66);
+      border-radius: 16px;
+      background: rgba(255, 250, 241, .62);
     }
 
-    .creation-card h3 {
-      margin: 0 0 8px;
-      font-size: 1.06rem;
+    .manifesto-block + .manifesto-block {
+      margin-top: 24px;
     }
 
-    .creation-card p {
+    .manifesto h3 {
+      margin: 0 0 18px;
+      font-size: 1.12rem;
+      color: var(--ink);
+    }
+
+    .manifesto p {
       margin: 0;
-      color: var(--muted);
-      font-size: .96rem;
+      color: #514637;
+      font-size: clamp(1.02rem, 2vw, 1.14rem);
+      line-height: 2.08;
     }
 
-    .bridge {
-      margin-top: 18px;
-      padding: 18px;
-      border-left: 5px solid var(--green);
-      background: #f5f8f1;
-      border-radius: 14px;
-      color: #526448;
-      font-weight: 650;
+    .manifesto p + p {
+      margin-top: 1.3em;
+    }
+
+    .manifesto .english p {
+      color: var(--muted);
+      line-height: 1.95;
     }
 
     .residents-grid {
@@ -287,7 +291,6 @@
         gap: 12px;
       }
 
-      .creation-grid,
       .residents-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -323,7 +326,6 @@
         border-radius: 16px;
       }
 
-      .creation-grid,
       .residents-grid {
         grid-template-columns: 1fr;
       }
@@ -353,45 +355,41 @@
     <section class="section" id="created" aria-labelledby="created-title">
       <div class="section-head">
         <div>
-          <h2 id="created-title">How Food Life Is Created</h2>
-          <p class="subhead">Food Lifeの作られ方</p>
+          <h2 id="created-title">How Food Life Is Created / Food Lifeの作られ方</h2>
         </div>
-        <p class="lead">
-          Food Lifeは、AIだけが作る世界でも、人間だけが作る物語でもありません。
-          小さな違和感を人間が見つけ、AIが形にし、また人間が温度を確かめる。
-          その往復から生まれる、静かな共同創作文化です。
-        </p>
+        <p class="lead">AIと人間が、それぞれの得意な役割を持ち寄りながら、静かに街を育てています。</p>
       </div>
 
-      <div class="creation-grid">
-        <article class="creation-card">
-          <h3>1. A Human Begins With Care<br>人間が、気配から始める</h3>
-          <p>
-            A small feeling comes first: a tired evening, a kind worker, a tiny mistake.
-            先にあるのは設定ではなく、疲れた日に帰りたくなる空気です。
-          </p>
-        </article>
+      <div class="manifesto">
+        <div class="manifesto-block">
+          <p>Food Lifeは、<br>日本人の50代クリエイターとChatGPTが、<br>一緒に育てている世界です。</p>
 
-        <article class="creation-card">
-          <h3>2. AI Helps Give It Shape<br>AIが、形を一緒に探す</h3>
-          <p>
-            AI suggests characters, places, scenes, and prompts while keeping the town gentle.
-            AIは効率のためだけでなく、やさしさを見失わないための相棒です。
-          </p>
-        </article>
+          <p>人間は、<br>「どんな世界なら安心できるか」<br>「どんな優しさを描きたいか」<br>を考えています。</p>
 
-        <article class="creation-card">
-          <h3>3. The Town Learns Slowly<br>街が、少しずつ育つ</h3>
-          <p>
-            Each resident, shop, and street corner is revised until it feels lived-in.
-            住人も場所も、一度で完成せず、日常の中で少しずつ育ちます。
-          </p>
-        </article>
-      </div>
+          <p>ChatGPTは、<br>アイデア整理、<br>世界観の言語化、<br>キャラクターや物語の発展を支援しています。</p>
 
-      <div class="bridge">
-        Food Life is a culture of co-creation between AI and humans.  
-        Food Lifeは、AIと人間が互いの得意なことを持ち寄り、「安心して失敗できる街」を育てる文化です。
+          <p>私たちは、<br>AIと人間には、<br>それぞれ得意な役割があると考えています。</p>
+
+          <p>Food Lifeは、<br>その共同創作の実験でもあります。</p>
+
+          <p>疲れた時に、<br>そっと帰ってこられる場所を、<br>少しずつ育てています。</p>
+        </div>
+
+        <div class="manifesto-block english">
+          <h3>English Version</h3>
+
+          <p>Food Life is a world cultivated together by a Japanese creator in his 50s and ChatGPT.</p>
+
+          <p>The human creator thinks about questions such as:<br>“What kind of world helps people feel safe?”<br>and<br>“What kind of kindness should this world express?”</p>
+
+          <p>ChatGPT helps organize ideas,<br>expand the worldbuilding,<br>and support the development of characters and stories.</p>
+
+          <p>We believe humans and AI each have their own strengths.</p>
+
+          <p>Food Life is also an experiment in this new form of collaborative creativity.</p>
+
+          <p>Together,<br>we are slowly creating<br>a gentle place people can quietly return to when life feels tiring.</p>
+        </div>
       </div>
     </section>
 
