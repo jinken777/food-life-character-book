@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>もろこしジョー | Food Life Character Book</title>
+  <meta name="description" content="もろこしジョーは、Food Life商店街で静かに歌う焼きとうもろこしの路上ミュージシャン。誰かの帰り道に寄り添う音楽を大切にしています。">
+  <link rel="canonical" href="../characters/morokoshi-joe.html">
+  <meta property="og:title" content="もろこしジョー | Food Life Character Book">
+  <meta property="og:description" content="誰かの帰り道に、焼きたての一曲を置いている。">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../../generated_characters/approved/20260512_morokoshi_joe_street_musician.png">
+  <style>
+    :root {
+      --paper: #fff8ea;
+      --card: rgba(255,255,255,.86);
+      --ink: #33291e;
+      --text: #44382c;
+      --muted: #766858;
+      --line: #eadbc6;
+      --corn: #e8b94f;
+      --husk: #8ba76e;
+      --wood: #8c623c;
+      --sun: #dd9551;
+      --shadow: 0 18px 48px rgba(74, 50, 25, .1);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Yu Gothic", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 0%, rgba(232, 185, 79, .2), transparent 30rem),
+        radial-gradient(circle at 86% 8%, rgba(221, 149, 81, .16), transparent 28rem),
+        linear-gradient(180deg, #fff8ea 0%, #f4eee3 100%);
+      line-height: 1.84;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 26px 18px 58px; }
+    .back { display: inline-flex; margin: 0 0 18px; color: var(--muted); text-decoration: none; font-size: .94rem; border-bottom: 1px solid transparent; }
+    .back:hover { border-color: var(--corn); }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(260px, 410px) 1fr;
+      gap: 30px;
+      align-items: center;
+      padding: clamp(18px, 3vw, 28px);
+      background: rgba(255,255,255,.72);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+    .portrait {
+      aspect-ratio: 9 / 16;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      background: linear-gradient(160deg, #fff0bd, #fffaf2);
+      display: grid;
+      place-items: center;
+    }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .placeholder { display: none; padding: 28px; text-align: center; color: var(--muted); }
+    .eyebrow { margin: 0 0 8px; color: #8d7a39; font-weight: 800; letter-spacing: .02em; }
+    h1 { margin: 0; color: var(--ink); font-size: clamp(2.7rem, 8vw, 6rem); line-height: 1; letter-spacing: 0; }
+    .en { margin: 4px 0 20px; color: var(--muted); font-size: clamp(1.08rem, 3vw, 1.45rem); }
+    .catch {
+      margin: 0;
+      padding: 15px 17px;
+      border-left: 6px solid var(--corn);
+      border-radius: 14px;
+      background: #fff0c7;
+      color: #443628;
+      font-size: 1.08rem;
+      font-weight: 800;
+      line-height: 1.65;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .chip { padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; background: #f7f5e9; color: #657342; font-size: .92rem; font-weight: 650; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; margin-top: 22px; }
+    .card { grid-column: span 6; padding: 23px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); box-shadow: 0 10px 24px rgba(74, 50, 25, .06); }
+    .wide { grid-column: span 12; }
+    h2 { margin: 0 0 12px; color: var(--ink); font-size: 1.24rem; line-height: 1.35; }
+    h3 { margin: 18px 0 8px; color: var(--ink); font-size: 1.04rem; }
+    p { margin: 0; }
+    p + p { margin-top: 1em; }
+    ul { margin: 0; padding-left: 1.2rem; }
+    li + li { margin-top: 5px; }
+    .profile { display: grid; grid-template-columns: 8.5rem 1fr; gap: 8px 14px; font-size: .98rem; }
+    .profile dt { color: var(--muted); }
+    .profile dd { margin: 0; font-weight: 700; color: #3d342c; }
+    .linklist { display: flex; flex-wrap: wrap; gap: 10px; }
+    .linkpill { padding: 10px 13px; border: 1px solid #dce5cf; border-radius: 12px; background: #f5f8ef; color: #596842; font-weight: 700; text-decoration: none; }
+    .today { border-color: #efd09a; background: linear-gradient(135deg, #fff0c9, #ffffff 68%); }
+    .note { border-left: 6px solid var(--husk); }
+    footer { padding: 34px 0 0; color: var(--muted); text-align: center; font-size: .92rem; }
+    @media (max-width: 820px) {
+      .hero { grid-template-columns: 1fr; }
+      .portrait { width: min(100%, 360px); margin: 0 auto; }
+      .card { grid-column: span 12; }
+      .profile { grid-template-columns: 1fr; }
+      h1 { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../index.html">Food Life Character Book TOPへ戻る</a>
+
+    <section class="hero">
+      <div class="portrait">
+        <img src="../../generated_characters/approved/20260512_morokoshi_joe_street_musician.png" alt="もろこしジョーのポートレート" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="placeholder">もろこしジョーのポートレート画像表示欄</div>
+      </div>
+      <div>
+        <p class="eyebrow">Food Life Character Book</p>
+        <h1>もろこしジョー</h1>
+        <p class="en">Morokoshi Joe</p>
+        <p class="catch">誰かの帰り道に、焼きたての一曲を置いている。</p>
+        <div class="chips">
+          <span class="chip">焼きとうもろこし</span>
+          <span class="chip">路上ミュージシャン</span>
+          <span class="chip">夕方の商店街</span>
+          <span class="chip">帰り道の音楽</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card wide note">
+        <h2>Introduction</h2>
+        <p>もろこしジョーは、Food Life商店街の夕方に静かに歌っている、焼きとうもろこしの路上ミュージシャンです。</p>
+        <p>売れることや有名になることより、「誰かの帰り道に寄り添う音楽」を大切にしています。派手なロックスターではありません。仕事帰りの住人が少し立ち止まれる街角を選びます。</p>
+        <p>Food Lifeにおけるもろこしジョーは、「安心して帰ってこられる空気」を象徴する住人です。彼の歌は、何かを解決するためではなく、今日を終えた誰かのそばに少しだけ置かれています。</p>
+        <h3>English</h3>
+        <p>Morokoshi Joe is a grilled corn cob street musician who quietly sings in the evening shopping street of Food Life.</p>
+        <p>He cares less about fame and more about music that stays beside someone on the way home. He is not a flashy rock star. He chooses the small street corner where tired residents can pause for a moment.</p>
+      </article>
+
+      <article class="card">
+        <h2>基本プロフィール</h2>
+        <dl class="profile">
+          <dt>食品</dt><dd>焼きとうもろこし</dd>
+          <dt>職業</dt><dd>路上ミュージシャン / ギター弾き語り</dd>
+          <dt>主な場所</dt><dd>食品生活商店街、ホテル前、空港ロビー</dd>
+          <dt>持ち物</dt><dd>木製アコースティックギター、開いたギターケース</dd>
+          <dt>口癖</dt><dd>一曲、焼きたてでいきます</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h2>街での評判</h2>
+        <p>商店街の住人たちは、ジョーを「売れていない人」として見ていません。夕方になるとそこにいる人。店じまいの音に混ざって、やさしい一音を鳴らす人。疲れて帰る住人が、ほんの少し歩く速度をゆるめられる人です。</p>
+      </article>
+
+      <article class="card">
+        <h2>性格</h2>
+        <p>照れ屋で、少し古い言い回しをします。かっこつけようとしても、弦に粒がはさまるとすぐ困り笑いになります。誰か一人に届いたなら、それで少しだけ安心できる人です。</p>
+      </article>
+
+      <article class="card">
+        <h2>小さなこだわり</h2>
+        <ul>
+          <li>歌う前に小さくお辞儀する。</li>
+          <li>最初の一音は、店先ランプがつく時間に合わせたい。</li>
+          <li>ギターケースはいつも少し開けておく。</li>
+          <li>観客が一人でも、最後まで同じ声で歌う。</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>よくある小さな失敗</h2>
+        <ul>
+          <li>とうもろこし粒がギター弦にはさまる。</li>
+          <li>ピックが粒の隙間にぴたっと入る。</li>
+          <li>応援カードがギターケースに入りすぎる。</li>
+          <li>ミニアンプのつまみで街灯が少し明るくなる。</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>好きなもの</h2>
+        <ul>
+          <li>夕方の商店街</li>
+          <li>木製ギターの小さな音</li>
+          <li>店先ランプがつく瞬間</li>
+          <li>一人だけ立ち止まってくれる観客</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>苦手なもの</h2>
+        <ul>
+          <li>大きすぎる音</li>
+          <li>からかわれる拍手</li>
+          <li>急に注目されること</li>
+          <li>売れているかどうかだけで音楽を測ること</li>
+        </ul>
+      </article>
+
+      <article class="card wide">
+        <h2>働いている場所</h2>
+        <p>もろこしジョーの主な場所は、夕方の食品生活商店街です。赤いポスト、丸い街灯、クリーム色の店先、ミントグリーンの庇。店じまいが始まるころ、ジョーは小さな演奏スペースに立ち、ギターケースをそっと開きます。</p>
+      </article>
+
+      <article class="card wide">
+        <h2>Food Lifeでの役割</h2>
+        <p>もろこしジョーは、Food Lifeの「疲れた時に帰ってこられる街」という空気を、音で支える存在です。成功よりも先に、今日の帰り道に誰かが少し楽になることを大切にしています。</p>
+      </article>
+
+      <article class="card wide">
+        <h2>関係キャラクター</h2>
+        <div class="linklist">
+          <a class="linkpill" href="noa.html">ノア</a>
+          <span class="linkpill">ナス紳士</span>
+          <span class="linkpill">ぽこワッフル</span>
+          <span class="linkpill">ブラックコーヒー社長</span>
+          <span class="linkpill">アフロブロッコリー</span>
+          <span class="linkpill">しみこん大将</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>関連場所</h2>
+        <div class="linklist">
+          <span class="linkpill">食品生活商店街</span>
+          <span class="linkpill">ナス紳士ホテル前</span>
+          <span class="linkpill">フードシティ空港</span>
+          <span class="linkpill">アフロブロッコリー美容室</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>登場Shorts</h2>
+        <p><strong>もろこしジョー、応援カードがあふれる</strong><br>夕方の商店街で、ギターケースに応援カードが入りすぎる温かい路上ライブ回。</p>
+      </article>
+
+      <article class="card wide">
+        <h2>小さな日常エピソード</h2>
+        <p>夕方、ジョーはいつもの街灯の下でギターを鳴らしました。今日は、観客がいないように見えました。けれど、赤いポストの横でぽこワッフルが足を止め、店先ではクッキー商店主が小さくリズムを取っていました。</p>
+        <p>ジョーは気づかないふりをして、少しだけ声をやわらかくしました。その一曲が終わるころ、商店街のランプがひとつ、またひとつと灯りました。</p>
+      </article>
+
+      <article class="card wide today">
+        <h2>Today's Food Life</h2>
+        <p>夕方、もろこしジョーは商店街の街灯の下で一曲だけ歌った。観客はいないと思っていたけれど、店先の食品たちが小さくリズムを取っていた。ジョーは気づかないふりで、もう少しだけやさしく弾いた。</p>
+      </article>
+    </section>
+
+    <footer>Food Life Character Book - gentle lives, small songs, warm streets.</footer>
+  </main>
+</body>
+</html>
