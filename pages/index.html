@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food Life Character Book</title>
+  <meta name="description" content="Food Lifeは、AIと人間が一緒に育てている、疲れた時に帰ってこられるやさしい食品キャラクターの街です。">
+  <meta property="og:title" content="Food Life Character Book">
+  <meta property="og:description" content="疲れた時に帰ってこられる街。A gentle town you can return to when life feels tiring.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../worlds/foodlife_shopping_street.png">
+  <style>
+    :root {
+      --paper: #fffaf1;
+      --paper-soft: #f7efe2;
+      --card: rgba(255, 255, 255, .82);
+      --ink: #33291d;
+      --muted: #746858;
+      --line: #eadcc9;
+      --gold: #d6a94f;
+      --green: #9cbf9b;
+      --blue: #84a9bc;
+      --rose: #d9a0a0;
+      --shadow: 0 18px 46px rgba(77, 56, 33, .11);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Yu Gothic", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(214, 169, 79, .18), transparent 30rem),
+        radial-gradient(circle at 88% 10%, rgba(132, 169, 188, .14), transparent 28rem),
+        linear-gradient(180deg, #fff8eb 0%, #f5eee4 100%);
+      line-height: 1.8;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1120px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 28px 0 58px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 12px 2px 24px;
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    .brand {
+      font-weight: 800;
+      color: var(--ink);
+      letter-spacing: 0;
+    }
+
+    .nav {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav a:hover {
+      border-color: var(--gold);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 610px;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #f5ead9;
+      box-shadow: var(--shadow);
+    }
+
+    .hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(.94) contrast(.96) brightness(1.02);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(255, 250, 241, .16) 0%, rgba(255, 250, 241, .34) 45%, rgba(68, 44, 24, .63) 100%);
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      padding: clamp(26px, 6vw, 58px);
+      color: #fffaf1;
+      text-shadow: 0 2px 20px rgba(48, 31, 16, .34);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      font-size: .94rem;
+      font-weight: 800;
+      letter-spacing: .02em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(4rem, 13vw, 8.8rem);
+      line-height: .9;
+      letter-spacing: 0;
+    }
+
+    .tagline-ja {
+      margin: 18px 0 4px;
+      font-size: clamp(1.45rem, 4vw, 2.4rem);
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .tagline-en {
+      margin: 0;
+      font-size: clamp(1rem, 2.4vw, 1.34rem);
+      line-height: 1.6;
+      color: rgba(255, 250, 241, .92);
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: clamp(24px, 4vw, 38px);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(77, 56, 33, .07);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(220px, .8fr) 1fr;
+      gap: 26px;
+      align-items: end;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.75rem, 4vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .subhead {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 1.04rem;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .creation-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .creation-card {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255, 250, 241, .66);
+    }
+
+    .creation-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.06rem;
+    }
+
+    .creation-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .96rem;
+    }
+
+    .bridge {
+      margin-top: 18px;
+      padding: 18px;
+      border-left: 5px solid var(--green);
+      background: #f5f8f1;
+      border-radius: 14px;
+      color: #526448;
+      font-weight: 650;
+    }
+
+    .residents-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .resident-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      min-height: 100%;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fffdf8;
+      text-decoration: none;
+      box-shadow: 0 8px 18px rgba(77, 56, 33, .06);
+    }
+
+    .resident-image {
+      aspect-ratio: 4 / 5;
+      background: var(--paper-soft);
+      overflow: hidden;
+    }
+
+    .resident-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .resident-body {
+      padding: 15px;
+    }
+
+    .resident-body h3 {
+      margin: 0;
+      font-size: 1.14rem;
+      line-height: 1.35;
+    }
+
+    .resident-body .en {
+      margin: 2px 0 10px;
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.4;
+    }
+
+    .resident-body p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .93rem;
+      line-height: 1.65;
+    }
+
+    .note {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: .96rem;
+    }
+
+    footer {
+      padding: 32px 0 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 920px) {
+      .section-head {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .creation-grid,
+      .residents-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero {
+        min-height: 540px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .wrap {
+        width: min(100% - 24px, 1120px);
+        padding-top: 16px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-bottom: 16px;
+      }
+
+      .hero {
+        min-height: 520px;
+        border-radius: 16px;
+      }
+
+      .hero-copy {
+        padding: 28px 20px;
+      }
+
+      .section {
+        padding: 22px 16px;
+        border-radius: 16px;
+      }
+
+      .creation-grid,
+      .residents-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="topbar">
+      <div class="brand">Food Life Character Book</div>
+      <nav class="nav" aria-label="ページ内ナビゲーション">
+        <a href="#created">How Food Life Is Created</a>
+        <a href="#residents">Residents</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="top-title">
+      <img src="../worlds/foodlife_shopping_street.png" alt="夕方の食品生活商店街">
+      <div class="hero-copy">
+        <p class="eyebrow">Food Life Character Book</p>
+        <h1 id="top-title">Food Life</h1>
+        <p class="tagline-ja">疲れた時に帰ってこられる街</p>
+        <p class="tagline-en">A gentle town you can return to when life feels tiring.</p>
+      </div>
+    </section>
+
+    <section class="section" id="created" aria-labelledby="created-title">
+      <div class="section-head">
+        <div>
+          <h2 id="created-title">How Food Life Is Created</h2>
+          <p class="subhead">Food Lifeの作られ方</p>
+        </div>
+        <p class="lead">
+          Food Lifeは、AIだけが作る世界でも、人間だけが作る物語でもありません。
+          小さな違和感を人間が見つけ、AIが形にし、また人間が温度を確かめる。
+          その往復から生まれる、静かな共同創作文化です。
+        </p>
+      </div>
+
+      <div class="creation-grid">
+        <article class="creation-card">
+          <h3>1. A Human Begins With Care<br>人間が、気配から始める</h3>
+          <p>
+            A small feeling comes first: a tired evening, a kind worker, a tiny mistake.
+            先にあるのは設定ではなく、疲れた日に帰りたくなる空気です。
+          </p>
+        </article>
+
+        <article class="creation-card">
+          <h3>2. AI Helps Give It Shape<br>AIが、形を一緒に探す</h3>
+          <p>
+            AI suggests characters, places, scenes, and prompts while keeping the town gentle.
+            AIは効率のためだけでなく、やさしさを見失わないための相棒です。
+          </p>
+        </article>
+
+        <article class="creation-card">
+          <h3>3. The Town Learns Slowly<br>街が、少しずつ育つ</h3>
+          <p>
+            Each resident, shop, and street corner is revised until it feels lived-in.
+            住人も場所も、一度で完成せず、日常の中で少しずつ育ちます。
+          </p>
+        </article>
+      </div>
+
+      <div class="bridge">
+        Food Life is a culture of co-creation between AI and humans.  
+        Food Lifeは、AIと人間が互いの得意なことを持ち寄り、「安心して失敗できる街」を育てる文化です。
+      </div>
+    </section>
+
+    <section class="section" id="residents" aria-labelledby="residents-title">
+      <div class="section-head">
+        <div>
+          <h2 id="residents-title">Residents of Food Life</h2>
+          <p class="subhead">Food Lifeの住人たち</p>
+        </div>
+        <p class="lead">
+          はじめに出会う4人です。街を支える手、歌い続ける声、空をつなぐ笑顔、
+          そして安心を学び続ける小さなAI。どの住人も、Food Lifeの入口になります。
+        </p>
+      </div>
+
+      <div class="residents-grid">
+        <a class="resident-card" href="characters/renkon-oyakata.html">
+          <div class="resident-image">
+            <img src="../generated_characters/approved/20260512_renkon_oyakata_construction_foreman.png" alt="レンコン親方">
+          </div>
+          <div class="resident-body">
+            <h3>レンコン親方</h3>
+            <p class="en">Renkon Oyakata</p>
+            <p>街の足元を静かに直す親方。強さよりも、安全確認と声かけを大切にします。</p>
+          </div>
+        </a>
+
+        <article class="resident-card">
+          <div class="resident-image">
+            <img src="../generated_characters/approved/20260512_morokoshi_joe_street_musician.png" alt="もろこしジョー">
+          </div>
+          <div class="resident-body">
+            <h3>もろこしジョー</h3>
+            <p class="en">Morokoshi Joe</p>
+            <p>夕方の商店街で歌い続ける路上ミュージシャン。売れることより、今日も歌うことを選びます。</p>
+          </div>
+        </article>
+
+        <article class="resident-card">
+          <div class="resident-image">
+            <img src="../generated_characters/approved/20260511_lumi_macaron_ca.png" alt="ルミマカロン">
+          </div>
+          <div class="resident-body">
+            <h3>ルミマカロン</h3>
+            <p class="en">Lumi Macaron</p>
+            <p>空港と機内を明るくつなぐCA。小さな接客ミスも、軽やかな笑顔でやさしい時間に変えます。</p>
+          </div>
+        </article>
+
+        <article class="resident-card">
+          <div class="resident-image">
+            <img src="../generated_characters/legendary/20260513_noa_milk_pudding_ai.png" alt="ノア">
+          </div>
+          <div class="resident-body">
+            <h3>ノア</h3>
+            <p class="en">Noa</p>
+            <p>ミルクプリン型の街のサポートAI。効率だけでは届かない安心を、住人たちから学び続けます。</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="note">
+        The Character Book will keep growing quietly, one resident and one place at a time.  
+        この図鑑は、住人と場所がひとつ増えるたびに、少しずつ街らしくなっていきます。
+      </p>
+    </section>
+
+    <footer>Food Life Character Book - AI and human co-creation for a gentle town.</footer>
+  </main>
+</body>
+</html>
