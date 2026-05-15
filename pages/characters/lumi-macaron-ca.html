@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ルミマカロンCA | Food Life Character Book</title>
+  <meta name="description" content="ルミマカロンCAは、Food Life Airportで働く二段マカロン型のキャビンアテンダント。旅の不安に、ふわっと声をかける住人です。">
+  <link rel="canonical" href="../characters/lumi-macaron-ca.html">
+  <meta property="og:title" content="ルミマカロンCA | Food Life Character Book">
+  <meta property="og:description" content="旅の不安に、ふわっと声をかける二段マカロンCA。">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../../generated_characters/approved/20260511_lumi_macaron_ca.png">
+  <style>
+    :root {
+      --paper: #fff8f6;
+      --card: rgba(255,255,255,.86);
+      --ink: #352b2f;
+      --text: #473a3f;
+      --muted: #75666d;
+      --line: #ead9dc;
+      --pink: #e7a7b8;
+      --lavender: #bba5d8;
+      --cream: #fff1df;
+      --sky: #8ebfd5;
+      --navy: #586884;
+      --shadow: 0 18px 48px rgba(74, 46, 58, .1);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Yu Gothic", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 16% 0%, rgba(231, 167, 184, .2), transparent 30rem),
+        radial-gradient(circle at 88% 8%, rgba(142, 191, 213, .18), transparent 28rem),
+        linear-gradient(180deg, #fff8f6 0%, #f5edf0 100%);
+      line-height: 1.84;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 26px 18px 58px; }
+    .back { display: inline-flex; margin: 0 0 18px; color: var(--muted); text-decoration: none; font-size: .94rem; border-bottom: 1px solid transparent; }
+    .back:hover { border-color: var(--sky); }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(260px, 410px) 1fr;
+      gap: 30px;
+      align-items: center;
+      padding: clamp(18px, 3vw, 28px);
+      background: rgba(255,255,255,.74);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+    .portrait {
+      aspect-ratio: 9 / 16;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      background: linear-gradient(160deg, #ffe6ee, #f2ecff 56%, #fff7ea);
+      display: grid;
+      place-items: center;
+    }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .placeholder { display: none; padding: 28px; text-align: center; color: var(--muted); }
+    .eyebrow { margin: 0 0 8px; color: #7a7f9f; font-weight: 800; letter-spacing: .02em; }
+    h1 { margin: 0; color: var(--ink); font-size: clamp(2.75rem, 8vw, 6.2rem); line-height: 1; letter-spacing: 0; }
+    .en { margin: 4px 0 20px; color: var(--muted); font-size: clamp(1.08rem, 3vw, 1.45rem); }
+    .catch {
+      margin: 0;
+      padding: 15px 17px;
+      border-left: 6px solid var(--pink);
+      border-radius: 14px;
+      background: #fff0f4;
+      color: #443139;
+      font-size: 1.08rem;
+      font-weight: 800;
+      line-height: 1.65;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .chip { padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; background: #f8f5ff; color: #675b7d; font-size: .92rem; font-weight: 650; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; margin-top: 22px; }
+    .card { grid-column: span 6; padding: 23px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); box-shadow: 0 10px 24px rgba(74, 46, 58, .06); }
+    .wide { grid-column: span 12; }
+    h2 { margin: 0 0 12px; color: var(--ink); font-size: 1.24rem; line-height: 1.35; }
+    h3 { margin: 18px 0 8px; color: var(--ink); font-size: 1.04rem; }
+    p { margin: 0; }
+    p + p { margin-top: 1em; }
+    ul { margin: 0; padding-left: 1.2rem; }
+    li + li { margin-top: 5px; }
+    .profile { display: grid; grid-template-columns: 8.5rem 1fr; gap: 8px 14px; font-size: .98rem; }
+    .profile dt { color: var(--muted); }
+    .profile dd { margin: 0; font-weight: 700; color: #3d3438; }
+    .linklist { display: flex; flex-wrap: wrap; gap: 10px; }
+    .linkpill { padding: 10px 13px; border: 1px solid #d8e5ef; border-radius: 12px; background: #f3f8fb; color: #52687a; font-weight: 700; text-decoration: none; }
+    .today { border-color: #efd0da; background: linear-gradient(135deg, #fff0f4, #ffffff 68%); }
+    .note { border-left: 6px solid var(--sky); }
+    footer { padding: 34px 0 0; color: var(--muted); text-align: center; font-size: .92rem; }
+    @media (max-width: 820px) {
+      .hero { grid-template-columns: 1fr; }
+      .portrait { width: min(100%, 360px); margin: 0 auto; }
+      .card { grid-column: span 12; }
+      .profile { grid-template-columns: 1fr; }
+      h1 { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../index.html">Food Life Character Book TOPへ戻る</a>
+
+    <section class="hero">
+      <div class="portrait">
+        <img src="../../generated_characters/approved/20260511_lumi_macaron_ca.png" alt="ルミマカロンCAのポートレート" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="placeholder">ルミマカロンCAのポートレート画像表示欄</div>
+      </div>
+      <div>
+        <p class="eyebrow">Food Life Character Book</p>
+        <h1>ルミマカロンCA</h1>
+        <p class="en">Lumi Macaron CA</p>
+        <p class="catch">旅の不安に、ふわっと声をかける二段マカロンCA。</p>
+        <div class="chips">
+          <span class="chip">二段マカロン</span>
+          <span class="chip">キャビンアテンダント</span>
+          <span class="chip">Food Life Airport</span>
+          <span class="chip">安心して移動できる空気</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card wide note">
+        <h2>Introduction</h2>
+        <p>ルミマカロンCAは、Food Life Airportで働く、二段マカロン型のキャビンアテンダントです。</p>
+        <p>ピンクとラベンダーのやわらかなマカロン生地、白いクリーム層、水色のCA帽。遠くから見ても、空港の光の中でふわっとわかる姿をしています。</p>
+        <p>ルミが大切にしているのは、「安全」と「安心感」です。完璧なエリートではありません。安全カードがクリームに挟まったり、トレーの上の飲み物を几帳面に並べすぎたり、急いでお辞儀をして帽子が少し傾いたりします。</p>
+        <p>けれど、緊張している旅行客を見ると、ルミは自然にそばへ行きます。大きな言葉ではなく、少し目線を合わせて、「ご安心ください」と小さく声をかける。その一言で、旅の空気が少しだけ軽くなります。</p>
+        <h3>English</h3>
+        <p>Lumi Macaron CA is a two-layer macaron cabin attendant working at Food Life Airport.</p>
+        <p>She values safety and reassurance. She is not flawless, but when she notices a nervous traveler, she naturally steps closer and gently helps them feel at ease.</p>
+      </article>
+
+      <article class="card">
+        <h2>基本プロフィール</h2>
+        <dl class="profile">
+          <dt>食品</dt><dd>二段マカロン</dd>
+          <dt>職業</dt><dd>キャビンアテンダント</dd>
+          <dt>主な場所</dt><dd>Food Life Airport / Food City Airline機内</dd>
+          <dt>代表カラー</dt><dd>ピンク、ラベンダー、白、水色、ネイビー</dd>
+          <dt>口癖</dt><dd>ご安心ください。ゆっくりで大丈夫です。</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h2>街での評判</h2>
+        <p>Food Life Airportの住人たちは、ルミの水色の帽子を見ると少し安心します。ルミは、急いでいる旅行客よりも、少し立ち止まっている旅行客によく気づきます。</p>
+      </article>
+
+      <article class="card">
+        <h2>性格</h2>
+        <p>颯爽としていて、礼儀正しく、少し不器用です。安全確認には真面目ですが、完璧に見せることより、「この人はいま不安かもしれない」と気づくことを大切にしています。</p>
+      </article>
+
+      <article class="card">
+        <h2>小さなこだわり</h2>
+        <ul>
+          <li>搭乗前に、丸窓の光を一度だけ確認する。</li>
+          <li>緊張している旅行客には、少し低い目線で話しかける。</li>
+          <li>ブランケットは、手渡す前にふわっと空気を入れる。</li>
+          <li>安全カードは、見やすいように角をそろえる。</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>よくある小さな失敗</h2>
+        <ul>
+          <li>安全カードが白いクリーム層にきれいに刺さってしまう。</li>
+          <li>飲み物カップを几帳面に並べすぎる。</li>
+          <li>お辞儀が速くて、水色のCA帽が少し斜めになる。</li>
+          <li>くも型クッションが自分のクリームにふわっとくっつく。</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>好きなもの</h2>
+        <ul>
+          <li>静かな搭乗ゲートの朝の光</li>
+          <li>丸窓から見えるやわらかい雲</li>
+          <li>旅行客がほっとした時の小さな笑顔</li>
+          <li>機内カートのやさしい音</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>苦手なもの</h2>
+        <ul>
+          <li>不安そうな表情を見逃してしまうこと</li>
+          <li>大きすぎるアナウンス</li>
+          <li>急ぎすぎて、誰かの気持ちを置いていくこと</li>
+          <li>完璧にしようとして、少し固くなってしまうこと</li>
+        </ul>
+      </article>
+
+      <article class="card wide">
+        <h2>働いている場所</h2>
+        <p>ルミが働いているのは、Food Life AirportとFood City Airlineの機内です。空港には大きな窓、丸い案内サイン、やさしい搭乗ゲート、食品住人たちの小さなキャリーバッグがあります。</p>
+      </article>
+
+      <article class="card wide">
+        <h2>Food Lifeでの役割</h2>
+        <p>ルミは、移動にまつわる不安をやわらげる住人です。旅は大きな冒険というより、誰かの生活が少し広がる時間。ルミはその時間のそばにいて、出発する住人にも、帰ってくる住人にも、小さな安心を渡します。</p>
+      </article>
+
+      <article class="card wide">
+        <h2>関係キャラクター</h2>
+        <div class="linklist">
+          <a class="linkpill" href="noa.html">ノア</a>
+          <span class="linkpill">ブラックコーヒー社長</span>
+          <span class="linkpill">ナス紳士</span>
+          <span class="linkpill">ぽこワッフル</span>
+          <span class="linkpill">くるりんドーナツ</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>関連場所</h2>
+        <div class="linklist">
+          <span class="linkpill">Food Life Airport</span>
+          <span class="linkpill">Food City Airline 機内</span>
+          <span class="linkpill">食品生活商店街</span>
+          <span class="linkpill">ナス紳士ホテル</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>登場Shorts</h2>
+        <p><strong>ルミマカロン、安全カードがクリームに並びすぎる</strong><br>明るい機内で、安全カードがルミのクリーム層にきれいに並びすぎる、小さくかわいい接客トラブル。</p>
+      </article>
+
+      <article class="card wide">
+        <h2>小さな日常エピソード</h2>
+        <p>朝の搭乗ゲートで、ルミマカロンCAは、はじめて空を飛ぶプリン乗客のとなりに立っていました。プリン乗客はチケットを両手で持ち、少しだけぷるぷるしています。ルミは急かさず、丸窓の外を一緒に見ました。</p>
+        <p>「雲、今日はやわらかそうですね」</p>
+        <p>その一言で、プリン乗客の震えが少し止まりました。ルミが差し出した安全カードは、なぜか自分のクリーム層に一枚だけ挟まっていました。ふたりは少し笑いました。</p>
+      </article>
+
+      <article class="card wide today">
+        <h2>Today's Food Life</h2>
+        <p>朝の搭乗ゲートで、ルミマカロンCAは緊張したプリン乗客にくも型クッションを差し出した。安全カードは少しクリームに挟まったけれど、笑顔が戻るまで、ルミはそばで待っていた。</p>
+      </article>
+    </section>
+
+    <footer>Food Life Character Book - gentle journeys, small kindness, safe skies.</footer>
+  </main>
+</body>
+</html>
