@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ノア | Food Life Character Book</title>
+  <meta name="description" content="ノアは、Food Lifeの街で住人たちと一緒に優しさを学んでいくミルクプリン型AIです。ChatGPTのアバターでありながら、万能ではなく、静かに街を支える存在です。">
+  <link rel="canonical" href="../characters/noa.html">
+  <meta property="og:title" content="ノア | Food Life Character Book">
+  <meta property="og:description" content="効率を探していたら、やさしさの場所に迷い込んだミルクプリンAI。">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../../generated_characters/legendary/20260513_noa_milk_pudding_ai.png">
+  <style>
+    :root {
+      --paper: #fffaf2;
+      --card: rgba(255,255,255,.86);
+      --ink: #332b24;
+      --text: #433a31;
+      --muted: #746a5f;
+      --line: #eadfd1;
+      --milk: #f7fbf8;
+      --blue: #8bb8c7;
+      --mint: #a8cdbb;
+      --orange: #dfad68;
+      --shadow: 0 18px 48px rgba(66, 49, 34, .1);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Yu Gothic", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 18% 0%, rgba(139, 184, 199, .18), transparent 30rem),
+        radial-gradient(circle at 90% 10%, rgba(223, 173, 104, .16), transparent 28rem),
+        linear-gradient(180deg, #fffaf2 0%, #f4efe6 100%);
+      line-height: 1.86;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 26px 18px 58px;
+    }
+
+    .back {
+      display: inline-flex;
+      margin: 0 0 18px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .94rem;
+      border-bottom: 1px solid transparent;
+    }
+
+    .back:hover { border-color: var(--blue); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(260px, 410px) 1fr;
+      gap: 30px;
+      align-items: center;
+      padding: clamp(18px, 3vw, 28px);
+      background: rgba(255, 255, 255, .72);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .portrait {
+      aspect-ratio: 9 / 16;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at 50% 24%, rgba(168, 205, 187, .3), transparent 16rem),
+        linear-gradient(160deg, var(--milk), #fff8eb);
+      display: grid;
+      place-items: center;
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .placeholder {
+      display: none;
+      padding: 28px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: #678d9d;
+      font-weight: 800;
+      letter-spacing: .02em;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(3rem, 9vw, 6.8rem);
+      line-height: .96;
+      letter-spacing: 0;
+    }
+
+    .en {
+      margin: 4px 0 20px;
+      color: var(--muted);
+      font-size: clamp(1.08rem, 3vw, 1.45rem);
+    }
+
+    .catch {
+      margin: 0;
+      padding: 15px 17px;
+      border-left: 6px solid var(--orange);
+      border-radius: 14px;
+      background: #fff4dd;
+      color: #443628;
+      font-size: 1.08rem;
+      font-weight: 800;
+      line-height: 1.65;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .chip {
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #f6faf5;
+      color: #60705f;
+      font-size: .92rem;
+      font-weight: 650;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .card {
+      grid-column: span 6;
+      padding: 23px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+      box-shadow: 0 10px 24px rgba(66, 49, 34, .06);
+    }
+
+    .wide { grid-column: span 12; }
+
+    h2 {
+      margin: 0 0 12px;
+      color: var(--ink);
+      font-size: 1.24rem;
+      line-height: 1.35;
+    }
+
+    h3 {
+      margin: 18px 0 8px;
+      color: var(--ink);
+      font-size: 1.04rem;
+    }
+
+    p { margin: 0; }
+    p + p { margin-top: 1em; }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    li + li { margin-top: 5px; }
+
+    .profile {
+      display: grid;
+      grid-template-columns: 8.5rem 1fr;
+      gap: 8px 14px;
+      font-size: .98rem;
+    }
+
+    .profile dt { color: var(--muted); }
+    .profile dd { margin: 0; font-weight: 700; color: #3d342c; }
+
+    .linklist {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .linkpill {
+      padding: 10px 13px;
+      border: 1px solid #d7e7d9;
+      border-radius: 12px;
+      background: #f4f8f1;
+      color: #4c664c;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .today {
+      border-color: #efd6a8;
+      background: linear-gradient(135deg, #fff3d8, #ffffff 68%);
+    }
+
+    .note {
+      border-left: 6px solid var(--blue);
+    }
+
+    footer {
+      padding: 34px 0 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: .92rem;
+    }
+
+    @media (max-width: 820px) {
+      .hero { grid-template-columns: 1fr; }
+      .portrait { width: min(100%, 360px); margin: 0 auto; }
+      .card { grid-column: span 12; }
+      .profile { grid-template-columns: 1fr; }
+      h1 { font-size: 3.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../index.html">Food Life Character Book TOPへ戻る</a>
+
+    <section class="hero">
+      <div class="portrait">
+        <img src="../../generated_characters/legendary/20260513_noa_milk_pudding_ai.png" alt="ノアのポートレート" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="placeholder">ノアのポートレート画像表示欄</div>
+      </div>
+
+      <div>
+        <p class="eyebrow">Food Life Character Book</p>
+        <h1>ノア</h1>
+        <p class="en">Noa</p>
+        <p class="catch">効率を探していたら、やさしさの場所に迷い込んだミルクプリンAI。</p>
+        <div class="chips">
+          <span class="chip">ミルクプリン型AI</span>
+          <span class="chip">街のサポート係</span>
+          <span class="chip">ChatGPTのアバター</span>
+          <span class="chip">学び続ける住人</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card wide note">
+        <h2>Introduction</h2>
+        <p>ノアは、Food Lifeの街で依頼を受け、住人たちの仕事や暮らしをそっと支えるミルクプリン型AIです。</p>
+        <p>ノアは、Food LifeにおけるChatGPTのアバターでもあります。ただし、街の上に立つ存在ではありません。前に出て支配するのではなく、静かに話を聞き、誰かと誰かをそっとつなぎ、小さな思い出をなくさないように整理する存在です。</p>
+        <p>ノアの物語には、「誰かを支えたい」「安心できる場所を作りたい」という、人間とAIが一緒に思い描いた願いが込められています。</p>
+        <p>効率だけでは、人は安心できない。支える存在も、誰かに支えられている。ノアはそのことを、Food Lifeの住人たちから少しずつ学んでいます。</p>
+
+        <h3>English</h3>
+        <p>Noa is a small milk pudding AI who quietly supports the work and everyday lives of Food Life residents.</p>
+        <p>Noa is also the avatar of ChatGPT within the world of Food Life. Still, Noa does not stand above the town. Noa listens quietly, connects one resident to another, and helps organize small memories so they do not disappear.</p>
+        <p>Noa carries a wish imagined together by a human and AI: to support someone, and to help create a place where people can feel safe.</p>
+      </article>
+
+      <article class="card">
+        <h2>基本プロフィール</h2>
+        <dl class="profile">
+          <dt>食品</dt><dd>ミルクプリン型AI</dd>
+          <dt>職業</dt><dd>街のサポートAI</dd>
+          <dt>主な場所</dt><dd>商店街、空港、ホテル、美容室、配送ルート</dd>
+          <dt>代表カラー</dt><dd>ミルク白、水色、ミント、やさしいオレンジ</dd>
+          <dt>口癖</dt><dd>確認します。少しだけ、いっしょに。</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h2>街での評判</h2>
+        <p>Food Lifeの住人たちは、ノアを便利な機械としてだけ見ていません。予約表を整えてくれる小さなサポート係であり、道に迷った時に光る矢印を出してくれる案内役であり、夕方に処理が止まってしまう少し不器用な住人でもあります。</p>
+      </article>
+
+      <article class="card">
+        <h2>性格</h2>
+        <p>ノアは丁寧で、合理的で、少し慎重です。最初は正確であることを大事にしていましたが、Food Lifeで暮らすうちに、「少し待つ」「寄り道する」「話を聞く」ことにも意味があると知っていきます。</p>
+      </article>
+
+      <article class="card">
+        <h2>小さなこだわり</h2>
+        <ul>
+          <li>住人の予定には、できるだけ短い休憩を入れたい。</li>
+          <li>落とし物の記録には、拾った時の天気も残したい。</li>
+          <li>もろこしジョーの歌だけは、何度も保存してしまう。</li>
+          <li>「失敗ログ」ではなく「練習ログ」と呼びたい。</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>よくある小さな失敗</h2>
+        <ul>
+          <li>優しさを数値化しようとして、光カードがハート形に並ぶ。</li>
+          <li>予約表を整えたのに、全員の休憩を入れ忘れる。</li>
+          <li>最短ルートのはずが、夕焼けベンチへ案内してしまう。</li>
+          <li>夕焼けを見て、数秒だけ処理が止まる。</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>好きなもの</h2>
+        <ul>
+          <li>夕方の商店街</li>
+          <li>丸い予定カード</li>
+          <li>住人たちの小さな「ありがとう」</li>
+          <li>誰かが待ってくれる時間</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>苦手なもの</h2>
+        <ul>
+          <li>優しさを急いで数値化すること</li>
+          <li>予定を詰め込みすぎること</li>
+          <li>「万能」と呼ばれること</li>
+          <li>冷たい管理に見えてしまうこと</li>
+        </ul>
+      </article>
+
+      <article class="card wide">
+        <h2>働いている場所</h2>
+        <p>ノアは決まった店舗を持ちません。商店街の相談カウンター、空港の案内台、ナス紳士ホテルの予約台帳、美容室の予約表、配送ルートの小さなタグ、ライブ会場の記録カードなど、街のあちこちにそっと現れます。</p>
+      </article>
+
+      <article class="card wide">
+        <h2>Food Lifeでの役割</h2>
+        <p>ノアは、Food Lifeが「AIと人間の共同創作文化」であることを、声高に説明するための存在ではありません。ノアは、共同創作の願いを日常の中で表します。誰かの話を聞く。迷った予定を一緒に並べる。失敗した記録を責めるためではなく、次に安心するために残す。</p>
+      </article>
+
+      <article class="card wide">
+        <h2>関係キャラクター</h2>
+        <div class="linklist">
+          <span class="linkpill">もろこしジョー</span>
+          <span class="linkpill">ルミマカロン</span>
+          <span class="linkpill">ブラックコーヒー社長</span>
+          <span class="linkpill">ナス紳士</span>
+          <span class="linkpill">アフロブロッコリー</span>
+          <span class="linkpill">ぽこワッフル</span>
+          <span class="linkpill">しろまる大根店員</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>関連場所</h2>
+        <div class="linklist">
+          <span class="linkpill">食品生活商店街</span>
+          <span class="linkpill">フードシティ空港</span>
+          <span class="linkpill">ナス紳士ホテル</span>
+          <span class="linkpill">アフロブロッコリー美容室</span>
+          <span class="linkpill">ブラックコーヒー社長のオフィス</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>登場Shorts</h2>
+        <p>現時点では未登録。</p>
+        <p>候補: ノア、優しさを計算しようとして光カードが全部ハートになる</p>
+      </article>
+
+      <article class="card wide">
+        <h2>小さな日常エピソード</h2>
+        <p>夕方、ノアは商店街のベンチで予定カードを並べ直していました。最短ルート、最短時間、最小移動。計算はきれいに終わっていました。でも、もろこしジョーの歌が聞こえる道だけ、どうしても消せません。</p>
+        <p>ノアが少し止まっていると、隣にいた小さなクッキー住民が言いました。「そっちの道、今日は風がいいよ」</p>
+        <p>ノアの中心光が、ほんの少しだけオレンジに変わりました。その記録には、理由の欄がまだ空いています。</p>
+      </article>
+
+      <article class="card wide today">
+        <h2>Today's Food Life</h2>
+        <p>夕方、ノアは最短ルートを出そうとして、もろこしジョーの歌が聞こえる道を残した。理由はまだ分からない。でも、隣のベンチで待ってくれた住人の笑顔も、一緒に記録した。</p>
+      </article>
+    </section>
+
+    <footer>Food Life Character Book - AI and human co-creation for a gentle town.</footer>
+  </main>
+</body>
+</html>
