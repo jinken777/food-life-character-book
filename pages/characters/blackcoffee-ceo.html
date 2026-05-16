@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ブラックコーヒー社長 | Food Life Character Book</title>
+  <meta name="description" content="ブラックコーヒー社長は、厳しい顔のまま部下の終電と休憩を守る黒いコーヒーカップ社長。Food Lifeの静かな責任感を象徴する住人です。">
+  <link rel="canonical" href="../characters/blackcoffee-ceo.html">
+  <meta property="og:title" content="ブラックコーヒー社長 | Food Life Character Book">
+  <meta property="og:description" content="半目で締切を見るけれど、誰より先に部下の終電を見ている黒いコーヒーカップ社長。">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../../generated_characters/approved/20260511_blackcoffee_ceo.png">
+  <style>
+    :root {
+      --paper: #f7f1e8;
+      --card: rgba(255,255,255,.86);
+      --ink: #2e2924;
+      --text: #443a32;
+      --muted: #75675d;
+      --line: #e4d8cc;
+      --coffee: #2b211d;
+      --brown: #5a4034;
+      --navy: #34445b;
+      --steam: #f7f3eb;
+      --note: #f0cf68;
+      --lamp: #e7b66f;
+      --shadow: 0 18px 48px rgba(38, 29, 24, .15);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Yu Gothic", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 14% 0%, rgba(240, 207, 104, .18), transparent 30rem),
+        radial-gradient(circle at 88% 8%, rgba(52, 68, 91, .18), transparent 28rem),
+        linear-gradient(180deg, #f8f1e8 0%, #eee7df 100%);
+      line-height: 1.86;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 26px 18px 58px; }
+    .back { display: inline-flex; margin: 0 0 18px; color: var(--muted); text-decoration: none; font-size: .94rem; border-bottom: 1px solid transparent; }
+    .back:hover { border-color: var(--note); }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(260px, 410px) 1fr;
+      gap: 30px;
+      align-items: center;
+      padding: clamp(18px, 3vw, 28px);
+      background: rgba(255,255,255,.76);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+    .portrait {
+      aspect-ratio: 9 / 16;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      background: linear-gradient(160deg, #2d2825, #75604f 62%, #f1dfbe);
+      display: grid;
+      place-items: center;
+    }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .placeholder { display: none; padding: 28px; text-align: center; color: var(--muted); background: #fffaf2; }
+    .eyebrow { margin: 0 0 8px; color: var(--navy); font-weight: 800; letter-spacing: .02em; }
+    h1 { margin: 0; color: var(--ink); font-size: clamp(2.2rem, 6.4vw, 5rem); line-height: 1.08; letter-spacing: 0; }
+    .en { margin: 8px 0 20px; color: var(--muted); font-size: clamp(1.08rem, 3vw, 1.45rem); }
+    .catch {
+      margin: 0;
+      padding: 15px 17px;
+      border-left: 6px solid var(--note);
+      border-radius: 14px;
+      background: #fff1c7;
+      color: #3f3128;
+      font-size: 1.08rem;
+      font-weight: 800;
+      line-height: 1.65;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .chip { padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; background: #fffaf2; color: #5c4d43; font-size: .92rem; font-weight: 650; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; margin-top: 22px; }
+    .card { grid-column: span 6; padding: 23px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); box-shadow: 0 10px 24px rgba(38, 29, 24, .08); }
+    .wide { grid-column: span 12; }
+    .note-card { border-left: 6px solid var(--coffee); }
+    h2 { margin: 0 0 12px; color: var(--ink); font-size: 1.24rem; line-height: 1.35; }
+    h3 { margin: 18px 0 8px; color: var(--ink); font-size: 1.04rem; }
+    p { margin: 0; }
+    p + p { margin-top: 1em; }
+    .english { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); color: #55483e; }
+    .english h3 { color: #45382f; }
+    ul { margin: 0; padding-left: 1.2rem; }
+    li + li { margin-top: 5px; }
+    .profile { display: grid; grid-template-columns: 8.5rem 1fr; gap: 8px 14px; font-size: .98rem; }
+    .profile dt { color: var(--muted); }
+    .profile dd { margin: 0; font-weight: 700; color: #3d312a; }
+    .linklist { display: flex; flex-wrap: wrap; gap: 10px; }
+    .linkpill { padding: 10px 13px; border: 1px solid #ded3c6; border-radius: 12px; background: #fffaf2; color: #55483d; font-weight: 700; text-decoration: none; }
+    .shorts { border-left: 6px solid var(--lamp); }
+    .shorts-list { display: grid; gap: 12px; }
+    .shorts-item { padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #fffbf4; }
+    .shorts-item h3 { margin: 0 0 8px; font-size: 1rem; line-height: 1.45; }
+    .shorts-missing { display: inline-flex; margin: 8px 0; padding: 7px 10px; border-radius: 999px; background: #f7f0e5; color: var(--muted); font-size: .9rem; font-weight: 700; }
+    .shorts-note { margin: 8px 0 0; color: var(--muted); font-size: .94rem; line-height: 1.65; }
+    .today { border-color: #e2c375; background: linear-gradient(135deg, #fff1c7, #ffffff 68%); }
+    footer { padding: 34px 0 0; color: var(--muted); text-align: center; font-size: .92rem; }
+    @media (max-width: 820px) {
+      .hero { grid-template-columns: 1fr; }
+      .portrait { width: min(100%, 360px); margin: 0 auto; }
+      .card { grid-column: span 12; }
+      .profile { grid-template-columns: 1fr; }
+      h1 { font-size: 2.7rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../index.html">Food Life Character Book TOPへ戻る</a>
+
+    <section class="hero">
+      <div class="portrait">
+        <img src="../../generated_characters/approved/20260511_blackcoffee_ceo.png" alt="ブラックコーヒー社長のポートレート" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="placeholder">ブラックコーヒー社長のポートレート画像表示欄</div>
+      </div>
+      <div>
+        <p class="eyebrow">Food Life Character Book</p>
+        <h1>ブラックコーヒー社長</h1>
+        <p class="en">Black Coffee CEO</p>
+        <p class="catch">半目で締切を見るけれど、誰より先に部下の終電を見ている黒いコーヒーカップ社長。</p>
+        <div class="chips">
+          <span class="chip">ブラックコーヒー</span>
+          <span class="chip">社長</span>
+          <span class="chip">終電メモ</span>
+          <span class="chip">不器用な優しさ</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card wide note-card">
+        <h2>Introduction</h2>
+        <p>ブラックコーヒー社長は、Food Lifeの高層ビル上層階にあるエグゼクティブオフィスで働く、黒いコーヒーカップの社長です。</p>
+        <p>深いブラックコーヒーの液面、白い湯気、銀縁メガネ、黒いスーツ風のカップスリーブ。見た目は少し厳しく、言葉も短いので、初めて会う住人は少しだけ緊張します。</p>
+        <p>けれど、彼は怒鳴りません。部下を責めません。終電の時間を誰よりも気にし、寒そうな社員には無言で毛布を置き、ミスした資料には静かにふせんを貼ります。</p>
+        <p>ブラックコーヒー社長の優しさは、わかりやすい笑顔ではなく、小さな行動として現れます。</p>
+        <div class="english">
+          <h3>English Version</h3>
+          <p>Black Coffee CEO is a black coffee cup executive who works in a quiet office high above the Food Life city.</p>
+          <p>He has a deep black coffee surface, soft white steam, silver-rim glasses, and a black suit-like cup sleeve. His face looks stern, and his words are short, so new residents may feel a little nervous at first.</p>
+          <p>But he does not shout. He does not blame his team. He watches the last train more carefully than anyone, quietly places blankets near tired employees, and adds sticky notes to reports so mistakes can be fixed without shame.</p>
+          <p>His kindness does not usually arrive as a bright smile. It appears in small actions.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>基本プロフィール / Profile</h2>
+        <dl class="profile">
+          <dt>食品</dt><dd>ブラックコーヒー / Black coffee</dd>
+          <dt>職業</dt><dd>食品生活カンパニーの社長 / CEO</dd>
+          <dt>場所</dt><dd>エグゼクティブオフィス / Executive office</dd>
+          <dt>見た目</dt><dd>黒いカップ、白い湯気、銀縁メガネ、細い黒ネクタイ</dd>
+          <dt>口癖</dt><dd>「終電は、守れ。」 / Protect the last train.</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h2>街での評判</h2>
+        <p>Food Lifeの住人たちは、ブラックコーヒー社長のことを「怖そうだけど、帰り道を見てくれている社長」と思っています。彼のオフィスの明かりは、誰かを働かせるためではなく、最後の社員が安心して帰るまで残っています。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>The residents see him as a CEO who looks stern, but watches over everyone's way home. His office light stays on not to keep people working, but to make sure the last employee can leave safely.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>性格</h2>
+        <p>無口で、渋く、仕事に厳しい。締切や報告にはシビアですが、理不尽ではありません。優しさを見られると、湯気が少し曲がります。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>He is quiet, reserved, and serious about work. He is strict about deadlines and reports, but never unreasonable. When someone notices his kindness, his steam bends slightly.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>小さなこだわり</h2>
+        <ul>
+          <li>終電時計を、デスクの一番見える場所に置く。</li>
+          <li>ふせんは淡い黄色で統一する。</li>
+          <li>部下用の毛布を、社長室の端に必ず置いておく。</li>
+          <li>角砂糖ケースは、差し入れ用に補充する。</li>
+        </ul>
+        <div class="english">
+          <h3>English</h3>
+          <p>He keeps the last-train clock where everyone can see it. His notes are soft yellow, blankets are always ready, and sugar cubes are refilled for others.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>よくある小さな失敗</h2>
+        <ul>
+          <li>終電メモが自分のカップ顔や銀縁メガネにくっつく。</li>
+          <li>毛布をかけすぎて、マフィン社員がふわふわになる。</li>
+          <li>角砂糖を差し入れすぎて、小さなタワーになる。</li>
+          <li>湯気でメガネが曇り、締切時計の数字だけ見えない。</li>
+        </ul>
+        <div class="english">
+          <h3>English</h3>
+          <p>Last-train notes stick to his face, blankets pile up, sugar cubes become a tiny tower, and his own steam fogs his glasses right when he needs to read the clock.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>好きなもの</h2>
+        <p>静かな夜景、暖色のデスクライト、短い報告、温かい休憩、角砂糖ケースの小さな音、部下が終電に間に合う瞬間。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>Quiet city lights, warm desk lamps, concise reports, long enough breaks, the small sound of a sugar cube case, and the moment an employee catches the last train.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>苦手なもの</h2>
+        <p>無理な残業、帰りそびれ、誰かが自分を責めすぎること、休憩を遠慮する空気、優しさを大げさに感謝されること。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>Unnecessary overtime, missed trains, people blaming themselves too much, a room where no one feels allowed to rest, and being thanked too dramatically.</p>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>働いている場所</h2>
+        <p>ブラックコーヒー社長のエグゼクティブオフィスは、高層ビル上層階にある静かな深夜オフィスです。巨大なガラス窓、青白い都会の夜景、黒とダークブラウンの丸角デスク、暖色デスクライト。厳しく見える空間ですが、机には終電メモ、部下用毛布、角砂糖ケース、ふせんだらけの報告書、小さな観葉植物が置かれています。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>His executive office sits high above the city. It has huge glass windows, blue night lights, a dark rounded desk, and a warm lamp. The room may look strict, but the desk holds last-train notes, blankets, sugar cubes, marked reports, and a small plant.</p>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>Food Lifeでの役割</h2>
+        <p>ブラックコーヒー社長は、Food Lifeにおける「不器用な責任感」を象徴する住人です。終電を守る、休憩を入れる、ミスを責めずに直す、誰かの机に角砂糖を置く。そうした小さな行動で、働く住人たちが安心して明日へ帰れるようにしています。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>He represents awkward responsibility in Food Life. Through small actions, he helps working residents return to tomorrow safely.</p>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>レンコン親方との関係</h2>
+        <p>レンコン親方とは幼馴染であり、今でも変わらない親友です。ブラックコーヒー社長はレンコン親方を「レン」と呼び、レンコン親方はブラックコーヒー社長を「コー」と呼びます。二人はお互いを特別扱いせず、それぞれの仕事が街の安心を支えていることを深く理解しています。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>Renkon Oyakata is his childhood friend. Ko calls him "Ren," and Renkon calls him "Ko." They do not give each other special treatment, but they deeply understand how each other's work supports the town.</p>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>関係キャラクター</h2>
+        <div class="linklist">
+          <a class="linkpill" href="renkon-oyakata.html">レンコン親方</a>
+          <a class="linkpill" href="noa.html">ノア</a>
+          <a class="linkpill" href="lumi-macaron-ca.html">ルミマカロンCA</a>
+          <a class="linkpill" href="nasu-shinshi.html">ナス紳士</a>
+          <a class="linkpill" href="morokoshi-joe.html">もろこしジョー</a>
+          <span class="linkpill">しみこん大将</span>
+        </div>
+        <div class="english">
+          <h3>English</h3>
+          <p>Renkon is his trusted friend. Noa studies his silent kindness. Lumi notices his travel fatigue. Nasu welcomes him at the hotel. Morokoshi Joe's song may make him stop for a moment on the way home.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>関連場所</h2>
+        <div class="linklist">
+          <span class="linkpill">ブラックコーヒー社長のオフィス</span>
+          <span class="linkpill">Food Life商店街</span>
+          <span class="linkpill">レンコン親方の工事現場</span>
+          <span class="linkpill">ナス紳士ホテル</span>
+          <span class="linkpill">Food Life Airport</span>
+        </div>
+      </article>
+
+      <article class="card shorts">
+        <h2>登場Shorts</h2>
+        <div class="shorts-list">
+          <div class="shorts-item">
+            <h3>ブラックコーヒー社長、終電メモまみれ</h3>
+            <span class="shorts-missing">現時点では動画リンク未登録</span>
+            <p class="shorts-note">深夜オフィスで、終電を気にしすぎた社長の顔に黄色いメモが貼りつく。怖そうに見えて、実は部下を帰らせたいだけの静かな職業コント。</p>
+            <div class="english">
+              <h3>English</h3>
+              <p>In a late-night office, yellow last-train notes stick to his face because he is worrying about his team getting home.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>小さな日常エピソード</h2>
+        <p>雨の夜、クッキー社員が報告書を抱えたまま、終電時計を見落としていました。</p>
+        <p>ブラックコーヒー社長は何も言わず、黄色い終電メモを一枚、報告書の角に貼りました。クッキー社員が顔を上げると、デスクの端には小さな毛布と角砂糖が置かれています。</p>
+        <p>社長は半目のまま、短く言いました。「ミスは直す。君は帰れ。」その声は少し硬いけれど、デスクライトの色は温かいままでした。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>On a rainy night, a cookie employee held a report and forgot to check the last-train clock.</p>
+          <p>Black Coffee CEO said nothing. He placed one yellow note on the corner of the report. When the employee looked up, there was a small blanket and a sugar cube waiting at the edge of the desk.</p>
+          <p>With half-closed eyes, he said shortly, "The mistake can be fixed. You should go home." His voice was firm, but the desk lamp stayed warm.</p>
+        </div>
+      </article>
+
+      <article class="card wide today">
+        <h2>Today's Food Life</h2>
+        <p>雨の深夜、ブラックコーヒー社長は終電メモを一枚、報告書の角に貼った。クッキー社員が顔を上げる前に、机の端には小さな毛布と角砂糖が置かれていた。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>Late on a rainy night, Black Coffee CEO placed one last-train note on a report. Before the cookie employee looked up, a small blanket and a sugar cube were already waiting at the edge of the desk.</p>
+        </div>
+      </article>
+    </section>
+
+    <footer>Food Life Character Book - quiet responsibility, warm lights, safe ways home.</footer>
+  </main>
+</body>
+</html>
