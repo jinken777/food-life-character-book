@@ -169,11 +169,20 @@
           continue;
         }
 
+
         const text = await response.text();
-        if (!text.includes("main_character") || !text.includes("title")) {
+
+        const hasTitle = text.includes("title");
+        const hasCharacterColumn =
+          text.includes("main_character") ||
+          text.includes("character");
+
+        if (!hasTitle || !hasCharacterColumn) {
           errors.push(`${path}: CSVヘッダーを確認できません`);
           continue;
         }
+
+
 
         return text;
       } catch (error) {
