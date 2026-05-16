@@ -100,6 +100,7 @@
     .shorts-item { padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #fffdf5; }
     .shorts-item h3 { margin: 0 0 8px; font-size: 1rem; line-height: 1.45; }
     .shorts-missing { display: inline-flex; margin: 8px 0; padding: 7px 10px; border-radius: 999px; background: #f8efe0; color: #7a6858; font-weight: 800; font-size: .92rem; }
+    .shorts-date { margin: 6px 0 0; color: var(--muted); font-size: .88rem; font-weight: 700; }
     .shorts-note { margin: 8px 0 0; color: var(--muted); font-size: .94rem; line-height: 1.65; }
     .today { border-color: #e3c489; background: linear-gradient(135deg, #fff1d4, #ffffff 68%); }
     footer { padding: 34px 0 0; color: var(--muted); text-align: center; font-size: .92rem; }
@@ -274,15 +275,9 @@
 
       <article class="card shorts">
         <h2>登場Shorts</h2>
-        <div class="shorts-list">
+        <div class="shorts-list" data-character="ぽこワッフル">
           <div class="shorts-item">
-            <h3>ぽこワッフル、全マスに消印される</h3>
-            <span class="shorts-missing">現時点では動画リンク未登録</span>
-            <p class="shorts-note">ぽこワッフルが消印スタンプを押した瞬間、封筒ではなく自分のワッフル格子すべてに丸い消印が並んでしまう。怖くない、痛くない、郵便屋らしい小さな仕事ミス。</p>
-            <div class="english">
-              <h3>English</h3>
-              <p>At the moment Poko Waffle uses the postmark stamp, the round marks appear across his waffle grid instead of the envelope.</p>
-            </div>
+            <span class="shorts-missing">登場Shortsを読み込み中</span>
           </div>
         </div>
       </article>
@@ -312,5 +307,6 @@
 
     <footer>Food Life Character Book - small letters, gentle routes, warm deliveries.</footer>
   </main>
+  <script src="../assets/character-shorts.js" defer></script>
 </body>
 </html>
