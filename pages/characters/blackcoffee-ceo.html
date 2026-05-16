@@ -101,6 +101,7 @@
     .shorts-item { padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #fffbf4; }
     .shorts-item h3 { margin: 0 0 8px; font-size: 1rem; line-height: 1.45; }
     .shorts-missing { display: inline-flex; margin: 8px 0; padding: 7px 10px; border-radius: 999px; background: #f7f0e5; color: var(--muted); font-size: .9rem; font-weight: 700; }
+    .shorts-date { margin: 6px 0 0; color: var(--muted); font-size: .88rem; font-weight: 700; }
     .shorts-note { margin: 8px 0 0; color: var(--muted); font-size: .94rem; line-height: 1.65; }
     .today { border-color: #e2c375; background: linear-gradient(135deg, #fff1c7, #ffffff 68%); }
     footer { padding: 34px 0 0; color: var(--muted); text-align: center; font-size: .92rem; }
@@ -112,6 +113,7 @@
       h1 { font-size: 2.7rem; }
     }
   </style>
+  <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 </head>
 <body>
   <main class="wrap">
@@ -283,7 +285,7 @@
 
       <article class="card shorts">
         <h2>登場Shorts</h2>
-        <div class="shorts-list">
+        <div class="shorts-list" data-character="ブラックコーヒー社長">
           <div class="shorts-item">
             <h3>ブラックコーヒー社長、終電メモまみれ</h3>
             <span class="shorts-missing">現時点では動画リンク未登録</span>
@@ -321,5 +323,6 @@
 
     <footer>Food Life Character Book - quiet responsibility, warm lights, safe ways home.</footer>
   </main>
+  <script src="../assets/character-shorts.js?v=20260516-2" defer></script>
 </body>
 </html>

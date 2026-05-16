@@ -98,6 +98,7 @@
     .shorts-item h3 { margin: 0 0 8px; font-size: 1rem; line-height: 1.45; }
     .shorts-link { display: inline-flex; margin: 8px 0; color: #6b7442; font-weight: 800; text-decoration: none; border-bottom: 1px solid rgba(107, 116, 66, .28); }
     .shorts-link:hover { border-color: #6b7442; }
+    .shorts-date { margin: 6px 0 0; color: var(--muted); font-size: .88rem; font-weight: 700; }
     .shorts-note { margin: 8px 0 0; color: var(--muted); font-size: .94rem; line-height: 1.65; }
     .shorts-missing { display: inline-flex; margin: 8px 0; padding: 7px 10px; border-radius: 999px; background: #f7f2e4; color: var(--muted); font-size: .9rem; font-weight: 700; }
     .today { border-color: #efd09a; background: linear-gradient(135deg, #fff0c9, #ffffff 68%); }
@@ -111,6 +112,7 @@
       h1 { font-size: 3rem; }
     }
   </style>
+  <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 </head>
 <body>
   <main class="wrap">
@@ -281,7 +283,7 @@
 
       <article class="card">
         <h2>登場Shorts</h2>
-        <div class="shorts-list">
+        <div class="shorts-list" data-character="もろこしジョー">
           <div class="shorts-item">
             <h3>もろこしジョー、応援カードがあふれる</h3>
             <a class="shorts-link" href="https://youtube.com/shorts/2ky5xmG8aZw" target="_blank" rel="noopener noreferrer">YouTube Shortsを見る</a>
@@ -317,5 +319,6 @@
 
     <footer>Food Life Character Book - gentle lives, small songs, warm streets.</footer>
   </main>
+  <script src="../assets/character-shorts.js?v=20260516-2" defer></script>
 </body>
 </html>

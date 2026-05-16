@@ -100,6 +100,8 @@
     .shorts-item h3 { margin: 0 0 8px; font-size: 1rem; line-height: 1.45; }
     .shorts-link { display: inline-flex; margin: 8px 0; color: #6b4a78; font-weight: 800; text-decoration: none; border-bottom: 1px solid rgba(107, 74, 120, .28); }
     .shorts-link:hover { border-color: #6b4a78; }
+    .shorts-date { margin: 6px 0 0; color: var(--muted); font-size: .88rem; font-weight: 700; }
+    .shorts-missing { display: inline-flex; margin: 8px 0; padding: 7px 10px; border-radius: 999px; background: rgba(255,255,255,.65); color: var(--muted); font-size: .9rem; font-weight: 700; }
     .shorts-note { margin: 8px 0 0; color: var(--muted); font-size: .94rem; line-height: 1.65; }
     .today { border-color: #e9c987; background: linear-gradient(135deg, #fff0cd, #ffffff 68%); }
     footer { padding: 34px 0 0; color: var(--muted); text-align: center; font-size: .92rem; }
@@ -111,6 +113,7 @@
       h1 { font-size: 3rem; }
     }
   </style>
+  <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 </head>
 <body>
   <main class="wrap">
@@ -286,7 +289,7 @@
 
       <article class="card shorts">
         <h2>登場Shorts</h2>
-        <div class="shorts-list">
+        <div class="shorts-list" data-character="ナス紳士">
           <div class="shorts-item">
             <h3>ナス紳士、ベルを鳴らしすぎる</h3>
             <a class="shorts-link" href="https://youtube.com/shorts/T8Lc6qqEs9U" target="_blank" rel="noopener noreferrer">YouTube Shortsを見る</a>
@@ -322,5 +325,6 @@
 
     <footer>Food Life Character Book - gentle service, small mistakes, warm hotels.</footer>
   </main>
+  <script src="../assets/character-shorts.js?v=20260516-2" defer></script>
 </body>
 </html>
