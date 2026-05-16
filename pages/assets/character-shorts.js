@@ -1,5 +1,9 @@
 (function () {
-  const CSV_PATH = "../../shorts_rag.csv";
+  const CSV_PATHS = [
+    "../../shorts_rag.csv",
+    "/shorts_rag.csv",
+    "../shorts_rag.csv"
+  ];
 
   const aliasMap = {
     "ルミマカロンCA": ["ルミマカロンCA", "ルミマカロン"],
@@ -62,6 +66,7 @@
   }
 
   function rowsToObjects(rows) {
+    if (!rows.length) return [];
     const headers = rows[0].map((header) => header.replace(/^\uFEFF/, "").trim());
     return rows.slice(1).map((row) => {
       const item = {};
@@ -143,15 +148,48 @@
     return escapeHtml(value).replace(/`/g, "&#096;");
   }
 
+  function renderLoadError(message) {
+    return `
+      <div class="shorts-item">
+        <span class="shorts-missing">Shortsを読み込めませんでした</span>
+        <p class="shorts-note">${escapeHtml(message)}</p>
+      </div>
+    `;
+  }
+
+  async function fetchCsvText() {
+    const errors = [];
+
+    for (const path of CSV_PATHS) {
+      try {
+        const url = new URL(path, window.location.href);
+        const response = await fetch(url.toString(), { cache: "no-store" });
+        if (!response.ok) {
+          errors.push(`${path}: HTTP ${response.status}`);
+          continue;
+        }
+
+        const text = await response.text();
+        if (!text.includes("main_character") || !text.includes("title")) {
+          errors.push(`${path}: CSVヘッダーを確認できません`);
+          continue;
+        }
+
+        return text;
+      } catch (error) {
+        errors.push(`${path}: ${error.message}`);
+      }
+    }
+
+    throw new Error(errors.join(" / "));
+  }
+
   async function hydrateShortsList(list) {
     const characterName = (list.dataset.character || "").trim();
     if (!characterName) return;
 
     const aliases = aliasMap[characterName] || [characterName];
-    const response = await fetch(CSV_PATH);
-    if (!response.ok) throw new Error(`Unable to load ${CSV_PATH}`);
-
-    const text = await response.text();
+    const text = await fetchCsvText();
     const rows = rowsToObjects(parseCsv(text));
 
     const relatedShorts = rows
@@ -172,6 +210,7 @@
     document.querySelectorAll(".shorts-list[data-character]").forEach((list) => {
       hydrateShortsList(list).catch((error) => {
         console.warn("[Food Life] Shorts list fallback:", error);
+        list.innerHTML = renderLoadError(error.message || "shorts_rag.csv の取得に失敗しました。");
       });
     });
   });
