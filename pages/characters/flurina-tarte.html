@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>フルリーナ・タルト | Food Life Character Book</title>
+  <meta name="description" content="フルリーナ・タルトは、Food Lifeの街で映画ロケ中のフルーツタルト女優。華やかでも威張らず、現場の小さな仕事に敬意を払う住人です。">
+  <link rel="canonical" href="../characters/flurina-tarte.html">
+  <meta property="og:title" content="フルリーナ・タルト | Food Life Character Book">
+  <meta property="og:description" content="スターなのに、誰より小さな気遣いを忘れない。">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../../generated_characters/approved/20260514_fruina_tarte_actress.png">
+  <style>
+    :root {
+      --paper: #fff8ef;
+      --card: rgba(255,255,255,.87);
+      --ink: #382820;
+      --text: #493a31;
+      --muted: #7a685d;
+      --line: #ead9c8;
+      --tart: #c88a3d;
+      --custard: #fff0bf;
+      --berry: #c84f57;
+      --mint: #7eaa75;
+      --gold: #d8aa52;
+      --shadow: 0 18px 48px rgba(74, 45, 24, .11);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Yu Gothic", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 0%, rgba(200, 79, 87, .14), transparent 30rem),
+        radial-gradient(circle at 88% 8%, rgba(216, 170, 82, .22), transparent 28rem),
+        linear-gradient(180deg, #fff8ef 0%, #f6ede3 100%);
+      line-height: 1.84;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 26px 18px 58px; }
+    .back { display: inline-flex; margin: 0 0 18px; color: var(--muted); text-decoration: none; font-size: .94rem; border-bottom: 1px solid transparent; }
+    .back:hover { border-color: var(--berry); }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(260px, 410px) 1fr;
+      gap: 30px;
+      align-items: center;
+      padding: clamp(18px, 3vw, 28px);
+      background: rgba(255,255,255,.74);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+    .portrait {
+      aspect-ratio: 9 / 16;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      background: linear-gradient(160deg, #fff0bf, #ffe7db 58%, #fffaf3);
+      display: grid;
+      place-items: center;
+    }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .placeholder { display: none; padding: 28px; text-align: center; color: var(--muted); }
+    .eyebrow { margin: 0 0 8px; color: var(--berry); font-weight: 800; letter-spacing: .02em; }
+    h1 { margin: 0; color: var(--ink); font-size: clamp(2.45rem, 7vw, 5.65rem); line-height: 1; letter-spacing: 0; }
+    .en { margin: 4px 0 20px; color: var(--muted); font-size: clamp(1.08rem, 3vw, 1.45rem); }
+    .catch {
+      margin: 0;
+      padding: 15px 17px;
+      border-left: 6px solid var(--berry);
+      border-radius: 14px;
+      background: #fff0d8;
+      color: #493224;
+      font-size: 1.08rem;
+      font-weight: 800;
+      line-height: 1.65;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .chip { padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; background: #fffaf2; color: #6b5340; font-size: .92rem; font-weight: 650; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; margin-top: 22px; }
+    .card { grid-column: span 6; padding: 23px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); box-shadow: 0 10px 24px rgba(74, 45, 24, .06); }
+    .wide { grid-column: span 12; }
+    .note { border-left: 6px solid var(--gold); }
+    h2 { margin: 0 0 12px; color: var(--ink); font-size: 1.24rem; line-height: 1.35; }
+    h3 { margin: 18px 0 8px; color: var(--ink); font-size: 1.04rem; }
+    p { margin: 0; }
+    p + p { margin-top: 1em; }
+    .english { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); color: #59473a; }
+    .english h3 { color: #48372c; }
+    ul { margin: 0; padding-left: 1.2rem; }
+    li + li { margin-top: 5px; }
+    .profile { display: grid; grid-template-columns: 8.5rem 1fr; gap: 8px 14px; font-size: .98rem; }
+    .profile dt { color: var(--muted); }
+    .profile dd { margin: 0; font-weight: 700; color: #403229; }
+    .linklist { display: flex; flex-wrap: wrap; gap: 10px; }
+    .linkpill { padding: 10px 13px; border: 1px solid #ead6c1; border-radius: 12px; background: #fffaf2; color: #6b4e37; font-weight: 700; text-decoration: none; }
+    .shorts { border-left: 6px solid var(--berry); }
+    .shorts-list { display: grid; gap: 12px; }
+    .shorts-item { padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #fffbf4; }
+    .shorts-item h3 { margin: 0 0 8px; font-size: 1rem; line-height: 1.45; }
+    .shorts-link { display: inline-flex; margin: 8px 0; color: #8a4a45; font-weight: 800; text-decoration: none; border-bottom: 1px solid rgba(138, 74, 69, .28); }
+    .shorts-link:hover { border-color: #8a4a45; }
+    .shorts-date { margin: 6px 0 0; color: var(--muted); font-size: .88rem; font-weight: 700; }
+    .shorts-missing { display: inline-flex; margin: 8px 0; padding: 7px 10px; border-radius: 999px; background: rgba(255,255,255,.65); color: var(--muted); font-size: .9rem; font-weight: 700; }
+    .shorts-note { margin: 8px 0 0; color: var(--muted); font-size: .94rem; line-height: 1.65; }
+    .today { border-color: #e9c987; background: linear-gradient(135deg, #fff0cd, #ffffff 68%); }
+    footer { padding: 34px 0 0; color: var(--muted); text-align: center; font-size: .92rem; }
+    @media (max-width: 820px) {
+      .hero { grid-template-columns: 1fr; }
+      .portrait { width: min(100%, 360px); margin: 0 auto; }
+      .card { grid-column: span 12; }
+      .profile { grid-template-columns: 1fr; }
+      h1 { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../index.html">Food Life Character Book TOPへ戻る</a>
+
+    <section class="hero">
+      <div class="portrait">
+        <img src="../../generated_characters/approved/20260514_fruina_tarte_actress.png" alt="フルリーナ・タルトのポートレート" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="placeholder">フルリーナ・タルトのポートレート画像表示欄</div>
+      </div>
+      <div>
+        <p class="eyebrow">Food Life Character Book</p>
+        <h1>フルリーナ・タルト</h1>
+        <p class="en">Flurina Tarte</p>
+        <p class="catch">スターなのに、誰より小さな気遣いを忘れない。華やかな現場で、やさしいワンカットを待てるフルーツタルトの映画女優。</p>
+        <div class="chips">
+          <span class="chip">フルーツタルト</span>
+          <span class="chip">映画女優</span>
+          <span class="chip">長期ロケ中</span>
+          <span class="chip">現場への敬意</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card wide note">
+        <h2>Introduction</h2>
+        <p>フルリーナ・タルトは、Food Lifeの街で長期ロケをしているフルーツタルトの映画女優です。</p>
+        <p>丸い黄金色のタルト生地、淡いカスタードの顔、いちご、キウイ、ブルーベリー、オレンジ、ミントの果物冠。赤い小さなスカーフと金色のショールをまとい、ナス紳士ホテルに長期滞在しながら、商店街やホテルロビー、空港、映画撮影現場で撮影を続けています。</p>
+        <p>彼女は有名なスターですが、Food Lifeでは名声よりも、現場で働く一人ひとりの丁寧さを大切にします。台本カードがカスタードの顔に貼りついても、果物冠が光りすぎても、誰かを責めません。</p>
+        <div class="english">
+          <h3>English Version</h3>
+          <p>Flurina Tarte is a fruit tart movie actress filming long-term in the town of Food Life.</p>
+          <p>She has a round golden tart crust, a pale custard face, and a colorful fruit crown of strawberry, kiwi, blueberry, orange, and mint. With a small red scarf and an elegant gold shawl, she stays at Eggplant Gentleman Hotel while filming across the town.</p>
+          <p>She is a famous star, but in Food Life, fame matters less than the careful work of everyone on set. Even when a script card sticks to her custard face, she does not blame anyone.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>基本プロフィール / Profile</h2>
+        <dl class="profile">
+          <dt>食品</dt><dd>フルーツタルト / Fruit tart</dd>
+          <dt>職業</dt><dd>映画女優 / Movie actress</dd>
+          <dt>滞在先</dt><dd>ナス紳士ホテル / Eggplant Gentleman Hotel</dd>
+          <dt>場所</dt><dd>フルリーナ映画撮影現場 / Flurina Film Set</dd>
+          <dt>口調</dt><dd>上品でゆっくり / Graceful and calm</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h2>街での評判</h2>
+        <p>街の住人たちは、フルリーナを近づきにくいスターとしてだけ見ていません。撮影の合間に照明係へお礼を言い、ホテルの小さな接客ミスを笑って受け止める人として覚えています。</p>
+        <div class="english"><h3>English</h3><p>The residents remember her not only as a star, but as someone who thanks the lighting helper and warmly accepts small hotel service mistakes.</p></div>
+      </article>
+
+      <article class="card">
+        <h2>性格</h2>
+        <p>華やかで、落ち着いていて、気配りが細かい人です。完璧に見えることだけに固執せず、失敗した相手を責めず、自分のNGテイクも笑って受け止めます。</p>
+        <div class="english"><h3>English</h3><p>She is glamorous, calm, and deeply considerate. She does not cling to looking perfect, and she can gently laugh at her own bad takes.</p></div>
+      </article>
+
+      <article class="card">
+        <h2>小さなこだわり</h2>
+        <ul>
+          <li>本番前に果物冠のミントをそっと整える。</li>
+          <li>台本カードは読める文字が映らないよう裏返して持つ。</li>
+          <li>一番よい光より、みんながまぶしくない光を選ぶ。</li>
+          <li>ホテルロビーで撮影する時も、受付スタッフへお礼を忘れない。</li>
+        </ul>
+        <div class="english"><h3>English</h3><p>She straightens the mint in her fruit crown, keeps script cards blank to the camera, chooses gentle light for everyone, and thanks the hotel staff during lobby shoots.</p></div>
+      </article>
+
+      <article class="card">
+        <h2>よくある小さな失敗</h2>
+        <ul>
+          <li>台本カードがカスタード顔にぺたっと貼りつく。</li>
+          <li>スポットライトが果物冠に反射して、セットにカラフルな光が広がる。</li>
+          <li>小型カチンコがタルト生地の波型に引っかかる。</li>
+          <li>金色ショールが低いカメラ台にふわっと絡む。</li>
+        </ul>
+        <div class="english"><h3>English</h3><p>Script cards stick to her custard face, spotlights reflect off her fruit crown, tiny clapperboards catch on her crust, and her gold shawl floats around camera stands.</p></div>
+      </article>
+
+      <article class="card">
+        <h2>好きなもの</h2>
+        <p>やわらかいスポットライト、文字のない台本カード、差し入れの紅茶、夕方の商店街ロケ、ナス紳士ホテルの静かなロビー、現場スタッフの小さなうなずき。</p>
+        <div class="english"><h3>English</h3><p>Soft spotlights, blank script cards, tea on set, evening shopping street shoots, the quiet hotel lobby, and small nods from the crew.</p></div>
+      </article>
+
+      <article class="card">
+        <h2>苦手なもの</h2>
+        <p>急かしすぎる撮影、誰かを責める空気、冷たいスター扱い、強すぎるライト、街の生活音を邪魔ものとして扱うこと。</p>
+        <div class="english"><h3>English</h3><p>Rushed filming, blaming others, distant star treatment, harsh lights, and treating the town’s everyday sounds as something to erase.</p></div>
+      </article>
+
+      <article class="card wide">
+        <h2>働いている場所</h2>
+        <p>フルリーナの主な仕事場は、フルリーナ映画撮影現場です。木目の床、クリーム色の壁、低いカメラ台、小さなスポットライト、文字なしのカチンコ、台本カード、差し入れ紅茶。Food Lifeの各地へ出かける移動型の現場でもあります。</p>
+        <div class="english"><h3>English</h3><p>Her main workplace is the Flurina Film Set, with wooden floors, cream walls, low camera stands, small spotlights, blank clapperboards, script cards, and tea for the crew. It also travels through Food Life.</p></div>
+      </article>
+
+      <article class="card wide">
+        <h2>Food Lifeでの役割</h2>
+        <p>フルリーナは、「華やかさと謙虚さが同じ場所にあっていい」と教えてくれる住人です。有名であることを誰かを見下すためには使わず、普通に働く食品キャラクターたちの誠実さを画面に残そうとします。</p>
+        <div class="english"><h3>English</h3><p>Flurina shows that glamour and humility can exist together. She does not use fame to look down on anyone. She tries to leave the sincerity of ordinary work on screen.</p></div>
+      </article>
+
+      <article class="card wide">
+        <h2>関係キャラクター</h2>
+        <div class="linklist">
+          <a class="linkpill" href="nasu-shinshi.html">ナス紳士</a>
+          <a class="linkpill" href="morokoshi-joe.html">もろこしジョー</a>
+          <a class="linkpill" href="lumi-macaron-ca.html">ルミマカロンCA</a>
+          <a class="linkpill" href="afro-broccoli.html">アフロブロッコリー</a>
+          <span class="linkpill">ブラックコーヒー社長</span>
+          <a class="linkpill" href="poko-waffle.html">ぽこワッフル</a>
+        </div>
+        <div class="english"><h3>English</h3><p>Nasu Gentleman supports her hotel stay. Morokoshi Joe’s music moves her. Lumi shares safe travel, Afro helps before filming, Black Coffee CEO watches quiet previews, and Poko delivers script cards.</p></div>
+      </article>
+
+      <article class="card">
+        <h2>関連場所</h2>
+        <div class="linklist">
+          <span class="linkpill">フルリーナ映画撮影現場</span>
+          <span class="linkpill">ナス紳士ホテル</span>
+          <span class="linkpill">Food Life商店街</span>
+          <span class="linkpill">Food Life Airport</span>
+          <span class="linkpill">アフロブロッコリー美容室</span>
+        </div>
+      </article>
+
+      <article class="card shorts">
+        <h2>登場Shorts</h2>
+        <div class="shorts-list" data-character="フルリーナ・タルト">
+          <div class="shorts-item">
+            <span class="shorts-missing">登場Shortsを読み込み中</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>小さな日常エピソード</h2>
+        <p>夕方のホテルロビーで、フルリーナは本番前の位置に立っていました。マフィン助監督が小さなカチンコを構え、ナス紳士が受付の端でそっと見守っています。</p>
+        <p>フルリーナが静かに微笑んだ瞬間、台本カードがカスタードの顔にぺたっと貼りつきました。一瞬だけロビーが止まりました。けれどフルリーナは、カードをゆっくりはがして、少し照れた顔で言いました。「大丈夫、これもテイクに入れましょう。」</p>
+        <div class="english"><h3>English</h3><p>In the evening hotel lobby, Flurina stood in position before the take. A script card stuck softly to her custard face. For one moment, the lobby paused. Then she removed it gently and said, “It’s all right. Let’s keep this in the take.”</p></div>
+      </article>
+
+      <article class="card wide today">
+        <h2>Today's Food Life</h2>
+        <p>夕方のホテルロビーで、フルリーナの顔に台本カードがぺたっと貼りついた。彼女は少し照れて笑い、「これもテイクに入れましょう」と言った。現場の食品スタッフたちは、肩の力を抜いてもう一度うなずいた。</p>
+        <div class="english"><h3>English</h3><p>In the evening hotel lobby, a script card stuck to Flurina’s face. She smiled shyly and said, “Let’s keep this in the take.” The food-character crew relaxed and nodded again.</p></div>
+      </article>
+    </section>
+
+    <footer>Food Life Character Book - gentle takes, warm lights, small respect.</footer>
+  </main>
+  <script src="../assets/character-shorts.js?v=20260516-3" defer></script>
+</body>
+</html>
