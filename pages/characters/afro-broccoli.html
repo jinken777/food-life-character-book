@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>アフロブロッコリー | Food Life Character Book</title>
+  <meta name="description" content="アフロブロッコリーは、Food Life商店街の美容室で働く明るいブロッコリー美容師。少し盛りすぎても、最後はその子らしいかわいさに整えます。">
+  <link rel="canonical" href="../characters/afro-broccoli.html">
+  <meta property="og:title" content="アフロブロッコリー | Food Life Character Book">
+  <meta property="og:description" content="「最高じゃん！」で、少し盛りすぎた髪型までチャームポイントに変える美容師。">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../../generated_characters/legendary/afro_broccoli.png">
+  <style>
+    :root {
+      --paper: #fffaf0;
+      --card: rgba(255,255,255,.88);
+      --ink: #2f3528;
+      --text: #414333;
+      --muted: #70745f;
+      --line: #dfe8d3;
+      --broccoli: #3f6f45;
+      --mint: #b9dfcc;
+      --cream: #fff2d8;
+      --wood: #bd8a5b;
+      --orange: #e5a15d;
+      --shadow: 0 18px 48px rgba(48, 75, 49, .13);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Yu Gothic", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 14% 0%, rgba(185, 223, 204, .34), transparent 30rem),
+        radial-gradient(circle at 88% 8%, rgba(229, 161, 93, .17), transparent 28rem),
+        linear-gradient(180deg, #fffaf0 0%, #eff5e8 100%);
+      line-height: 1.86;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 26px 18px 58px; }
+    .back { display: inline-flex; margin: 0 0 18px; color: var(--muted); text-decoration: none; font-size: .94rem; border-bottom: 1px solid transparent; }
+    .back:hover { border-color: var(--broccoli); }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(260px, 410px) 1fr;
+      gap: 30px;
+      align-items: center;
+      padding: clamp(18px, 3vw, 28px);
+      background: rgba(255,255,255,.76);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+    .portrait {
+      aspect-ratio: 9 / 16;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      background: linear-gradient(160deg, #e2f1df, #fff2d8 62%, #f7fff6);
+      display: grid;
+      place-items: center;
+    }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .placeholder { display: none; padding: 28px; text-align: center; color: var(--muted); }
+    .eyebrow { margin: 0 0 8px; color: var(--broccoli); font-weight: 800; letter-spacing: .02em; }
+    h1 { margin: 0; color: var(--ink); font-size: clamp(2.3rem, 6.6vw, 5.2rem); line-height: 1.04; letter-spacing: 0; }
+    .en { margin: 6px 0 20px; color: var(--muted); font-size: clamp(1.08rem, 3vw, 1.45rem); }
+    .catch {
+      margin: 0;
+      padding: 15px 17px;
+      border-left: 6px solid var(--broccoli);
+      border-radius: 14px;
+      background: #eef8df;
+      color: #33402c;
+      font-size: 1.08rem;
+      font-weight: 800;
+      line-height: 1.65;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .chip { padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; background: #fffaf2; color: #5a654f; font-size: .92rem; font-weight: 650; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; margin-top: 22px; }
+    .card { grid-column: span 6; padding: 23px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); box-shadow: 0 10px 24px rgba(48, 75, 49, .07); }
+    .wide { grid-column: span 12; }
+    .note { border-left: 6px solid var(--broccoli); }
+    h2 { margin: 0 0 12px; color: var(--ink); font-size: 1.24rem; line-height: 1.35; }
+    h3 { margin: 18px 0 8px; color: var(--ink); font-size: 1.04rem; }
+    p { margin: 0; }
+    p + p { margin-top: 1em; }
+    .english { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); color: #4e513f; }
+    .english h3 { color: #3f4734; }
+    ul { margin: 0; padding-left: 1.2rem; }
+    li + li { margin-top: 5px; }
+    .profile { display: grid; grid-template-columns: 8.5rem 1fr; gap: 8px 14px; font-size: .98rem; }
+    .profile dt { color: var(--muted); }
+    .profile dd { margin: 0; font-weight: 700; color: #3d432f; }
+    .linklist { display: flex; flex-wrap: wrap; gap: 10px; }
+    .linkpill { padding: 10px 13px; border: 1px solid #d7e8cd; border-radius: 12px; background: #f7fff2; color: #49633f; font-weight: 700; text-decoration: none; }
+    .shorts { border-left: 6px solid var(--orange); }
+    .shorts-list { display: grid; gap: 12px; }
+    .shorts-item { padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #fffdf4; }
+    .shorts-item h3 { margin: 0 0 8px; font-size: 1rem; line-height: 1.45; }
+    .shorts-link { display: inline-flex; margin: 8px 0; color: #5a7b48; font-weight: 800; text-decoration: none; border-bottom: 1px solid rgba(90, 123, 72, .3); }
+    .shorts-link:hover { border-color: #5a7b48; }
+    .shorts-note { margin: 8px 0 0; color: var(--muted); font-size: .94rem; line-height: 1.65; }
+    .today { border-color: #d8c477; background: linear-gradient(135deg, #fff3c9, #ffffff 68%); }
+    footer { padding: 34px 0 0; color: var(--muted); text-align: center; font-size: .92rem; }
+    @media (max-width: 820px) {
+      .hero { grid-template-columns: 1fr; }
+      .portrait { width: min(100%, 360px); margin: 0 auto; }
+      .card { grid-column: span 12; }
+      .profile { grid-template-columns: 1fr; }
+      h1 { font-size: 2.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../index.html">Food Life Character Book TOPへ戻る</a>
+
+    <section class="hero">
+      <div class="portrait">
+        <img src="../../generated_characters/legendary/afro_broccoli.png" alt="アフロブロッコリーのポートレート" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="placeholder">アフロブロッコリーのポートレート画像表示欄</div>
+      </div>
+      <div>
+        <p class="eyebrow">Food Life Character Book</p>
+        <h1>アフロブロッコリー</h1>
+        <p class="en">Afro Broccoli</p>
+        <p class="catch">「最高じゃん！」で、少し盛りすぎた髪型まで、その子らしいチャームポイントに変えてしまうブロッコリー美容師。</p>
+        <div class="chips">
+          <span class="chip">ブロッコリー</span>
+          <span class="chip">美容師</span>
+          <span class="chip">褒め上手</span>
+          <span class="chip">盛りすぎコメディ</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card wide note">
+        <h2>Introduction</h2>
+        <p>アフロブロッコリーは、Food Life商店街の一角にあるアフロブロッコリー美容室で働く、美容師・スタイリストです。</p>
+        <p>大きな濃い緑のアフロ状ブロッコリー頭、緑の顔、大きな丸い目、白い美容師ケープ。手には丸みのある安全なハサミ、コーム、ふわふわ風のドライヤーを持っています。</p>
+        <p>彼はとても明るく、褒め上手です。少しナルシストで、自分のブロッコリーアフロが鏡に映ると「最高じゃん！」と先に自分を褒めてしまうこともあります。</p>
+        <p>けれど、アフロブロッコリーの美容室では、誰も見た目を否定されません。髪型を盛りすぎても、飾りをつけすぎても、まずはその子らしい良さを探します。</p>
+        <div class="english">
+          <h3>English Version</h3>
+          <p>Afro Broccoli is a hairstylist who works at Afro Broccoli Salon in the Food Life shopping street.</p>
+          <p>He has a large deep-green afro-shaped broccoli head, a green face, big round eyes, and a white stylist cape. He carries safe rounded scissors, a comb, and a fluffy warm-air dryer.</p>
+          <p>He is bright, positive, and very good at giving compliments. He is also a little narcissistic. When he sees his own broccoli afro in the mirror, he may praise himself first with a cheerful, "Looks amazing!"</p>
+          <p>But in his salon, no one is judged for how they look. Even if a hairstyle is a little too big, he starts by finding what makes that resident shine.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>基本プロフィール / Profile</h2>
+        <dl class="profile">
+          <dt>食品</dt><dd>ブロッコリー / Broccoli</dd>
+          <dt>職業</dt><dd>美容師・スタイリスト / Hairstylist</dd>
+          <dt>場所</dt><dd>アフロブロッコリー美容室 / Afro Broccoli Salon</dd>
+          <dt>見た目</dt><dd>大きな濃い緑のアフロ状ブロッコリー、白い美容師ケープ</dd>
+          <dt>口癖</dt><dd>「最高じゃん！」 / Looks amazing!</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h2>街での評判</h2>
+        <p>商店街の住人たちは、アフロブロッコリーの美容室を「ちょっと元気になって帰れる場所」と思っています。仕上がりが少し派手になっても、彼はまず褒めます。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>The residents think of Afro Broccoli Salon as a place where they can leave feeling a little more cheerful. Even when a style becomes bold, he starts with a compliment.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>性格</h2>
+        <p>明るく、ポジティブで、褒め上手。少しナルシストですが、嫌味ではありません。相手の良いところを見つけるのが早く、失敗した髪型もその子らしいかわいさへ整えます。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>He is bright, positive, and generous with compliments. He is a little narcissistic, but never mean. He quickly finds what is good in someone.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>小さなこだわり</h2>
+        <ul>
+          <li>ハサミとコームは、必ず鏡の中央にきれいに置く。</li>
+          <li>白い美容師ケープをふわっと広げてからかける。</li>
+          <li>鏡を見る前に、必ず一言褒める。</li>
+          <li>余ったリボンや飾りは、丸いトレーへ集める。</li>
+        </ul>
+        <div class="english">
+          <h3>English</h3>
+          <p>He lines up his scissors and comb, opens the cape with a soft flourish, compliments the customer before the mirror reveal, and gathers leftover ribbons on a small round tray.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>よくある小さな失敗</h2>
+        <ul>
+          <li>髪型を少し盛りすぎる。</li>
+          <li>褒めすぎて、お客さんが照れて固まる。</li>
+          <li>白いケープが自分のブロッコリーアフロに引っかかる。</li>
+          <li>切った前髪が、全部小さなミニアフロになる。</li>
+        </ul>
+        <div class="english">
+          <h3>English</h3>
+          <p>He makes hairstyles a little too big, compliments customers until they freeze shyly, catches the cape on his own afro, and sometimes turns trimmed hair into tiny mini-afros.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>好きなもの</h2>
+        <p>丸鏡のライト、ミントシャンプー、白いケープ、やわらかいドライヤーの風、ヘアピンの小さな音、お客さんが鏡を見て少し元気になる瞬間。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>Round mirror lights, mint shampoo, white capes, soft dryer wind, the tiny sound of hairpins, and the moment a customer feels a little brighter in the mirror.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>苦手なもの</h2>
+        <p>お客さんの見た目を悪く言う空気、怖いハサミの見せ方、痛そうなカット、失敗を笑いものにすること、褒める前に結論を急ぐこと。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>Negative talk about appearance, scary scissors, painful-looking haircuts, mocking mistakes, and rushing to a conclusion before encouragement.</p>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>働いている場所</h2>
+        <p>アフロブロッコリー美容室は、Food Life商店街にある明るくポジティブな美容室です。大きな丸鏡、白い美容師ケープ、ミントグリーンとクリーム色の壁、木目の鏡台、低い待合ソファ、タオルかご、リボンケース。毎日の生活の中でふっと立ち寄れるサロンです。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>Afro Broccoli Salon is a bright neighborhood salon with a large round mirror, white capes, mint-green and cream walls, a natural wood counter, a low waiting sofa, towels, and ribbon cases.</p>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>Food Lifeでの役割</h2>
+        <p>アフロブロッコリーは、Food Lifeにおける「そのままの良さを見つける人」です。少し自信がない住人に、鏡の前で「これ、似合ってる」と伝えます。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>Afro Broccoli is the resident who finds what is already good. He tells shy residents, "This suits you," in front of the mirror.</p>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>関係キャラクター</h2>
+        <div class="linklist">
+          <a class="linkpill" href="morokoshi-joe.html">もろこしジョー</a>
+          <a class="linkpill" href="noa.html">ノア</a>
+          <a class="linkpill" href="nasu-shinshi.html">ナス紳士</a>
+          <span class="linkpill">ぽこワッフル</span>
+          <a class="linkpill" href="musubiyama.html">むすび山</a>
+          <a class="linkpill" href="lumi-macaron-ca.html">ルミマカロンCA</a>
+        </div>
+        <div class="english">
+          <h3>English</h3>
+          <p>Morokoshi Joe is a regular customer. Noa helps with appointments. Nasu, Poko Waffle, Musubiyama, and Lumi each bring a different small salon moment into his day.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>関連場所</h2>
+        <div class="linklist">
+          <span class="linkpill">アフロブロッコリー美容室</span>
+          <span class="linkpill">Food Life商店街</span>
+          <span class="linkpill">ナス紳士ホテル</span>
+          <span class="linkpill">むすび相撲部屋</span>
+          <span class="linkpill">Food Life Airport</span>
+        </div>
+      </article>
+
+      <article class="card shorts">
+        <h2>登場Shorts</h2>
+        <div class="shorts-list">
+          <div class="shorts-item">
+            <h3>アフロブロッコリー、切った前髪がミニアフロ行列</h3>
+            <a class="shorts-link" href="https://youtube.com/shorts/9ISjtQ5CXcU" target="_blank" rel="noopener noreferrer">YouTube Shortsを見る</a>
+            <p class="shorts-note">美容院でカリフラワー客をカット中、切った前髪が床に落ちず、全部小さなミニアフロになって鏡台に並ぶ。明るく安全な、美容師の小さな仕事ミスコント。</p>
+            <div class="english">
+              <h3>English</h3>
+              <p>While trimming a cauliflower customer, the cut forelock pieces turn into tiny mini-afros and line up on the mirror counter.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>小さな日常エピソード</h2>
+        <p>夕方、もろこしジョーが商店街の演奏前に美容室へ寄りました。</p>
+        <p>アフロブロッコリーは、とうもろこしヒゲの前髪を少しだけ整えるつもりでした。けれど、切った房が丸いミニアフロになって、鏡台の上にぽんと立ちます。</p>
+        <p>ジョーが思わず笑うと、アフロブロッコリーも笑って「最高じゃん！」と言いました。ミニアフロは丸いトレーに並べられ、店の小さな名物になりました。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>One evening, Morokoshi Joe stopped by the salon before playing in the shopping street.</p>
+          <p>Afro Broccoli meant to trim only a little of his corn-silk bangs. But the cut piece turned into a tiny round mini-afro and popped up on the mirror counter.</p>
+          <p>Joe laughed, and Afro Broccoli laughed too. "Looks amazing!" he said. The mini-afros became a small salon favorite.</p>
+        </div>
+      </article>
+
+      <article class="card wide today">
+        <h2>Today's Food Life</h2>
+        <p>夕方の美容室で、アフロブロッコリーは切った前髪がミニアフロになっても「最高じゃん！」と笑った。照れたお客さんの鏡の中に、少し元気な顔が戻っていた。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>In the evening salon, Afro Broccoli laughed when a trimmed forelock became a tiny mini-afro. In the mirror, the shy customer looked a little brighter.</p>
+        </div>
+      </article>
+    </section>
+
+    <footer>Food Life Character Book - bright mirrors, gentle compliments, small confidence.</footer>
+  </main>
+</body>
+</html>
