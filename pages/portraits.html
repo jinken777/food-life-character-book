@@ -3,25 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portrait Gallery | Food Life Character Book</title>
-  <meta name="description" content="Food Lifeの街に暮らす住人たちのポートレートを、静かなアルバムのように眺められるCharacter Bookのギャラリーページです。">
+  <title>Food Life Portrait Gallery | Food Life Character Book</title>
+  <meta name="description" content="Food Lifeの街に残されたポートレート作品を、静かなアルバムのように眺めるギャラリーページです。">
   <link rel="canonical" href="./portraits.html">
-  <meta property="og:title" content="Portrait Gallery | Food Life Character Book">
-  <meta property="og:description" content="疲れた時に帰ってこられる街、Food Life。街に住むキャラクターたちの優しい肖像を並べた静かなギャラリーです。">
+  <meta property="og:title" content="Food Life Portrait Gallery | Food Life Character Book">
+  <meta property="og:description" content="疲れた時に帰ってこられる街、Food Life。住人たちの肖像と、街の空気を静かに並べたポートレートギャラリーです。">
   <meta property="og:type" content="website">
   <meta property="og:image" content="../worlds/foodlife_shopping_street.png">
   <style>
     :root {
       --paper: #fffaf1;
       --paper-soft: #f6ecdf;
-      --card: rgba(255, 255, 255, .86);
+      --card: rgba(255, 255, 255, .88);
       --ink: #33291d;
       --text: #493a31;
       --muted: #746858;
       --line: #eadcc9;
       --gold: #d6a94f;
-      --green: #9cbf9b;
-      --blue: #84a9bc;
       --shadow: 0 18px 46px rgba(77, 56, 33, .1);
     }
 
@@ -33,7 +31,7 @@
       color: var(--text);
       background:
         radial-gradient(circle at 12% 0%, rgba(214, 169, 79, .18), transparent 30rem),
-        radial-gradient(circle at 88% 12%, rgba(132, 169, 188, .15), transparent 28rem),
+        radial-gradient(circle at 88% 12%, rgba(132, 169, 188, .13), transparent 28rem),
         linear-gradient(180deg, #fff8eb 0%, #f5eee4 100%);
       line-height: 1.82;
     }
@@ -41,9 +39,9 @@
     a { color: inherit; }
 
     .wrap {
-      width: min(1120px, calc(100% - 36px));
+      width: min(1180px, calc(100% - 36px));
       margin: 0 auto;
-      padding: 28px 0 64px;
+      padding: 28px 0 66px;
     }
 
     .topbar {
@@ -68,11 +66,11 @@
     }
 
     .hero {
-      padding: clamp(30px, 6vw, 64px);
+      padding: clamp(34px, 7vw, 76px);
       border: 1px solid var(--line);
-      border-radius: 22px;
+      border-radius: 24px;
       background:
-        linear-gradient(135deg, rgba(255, 253, 248, .92), rgba(247, 239, 226, .82)),
+        linear-gradient(135deg, rgba(255, 253, 248, .95), rgba(247, 239, 226, .78)),
         url("../worlds/foodlife_shopping_street.png") center / cover;
       background-blend-mode: screen;
       box-shadow: var(--shadow);
@@ -88,173 +86,154 @@
     h1 {
       margin: 0;
       color: var(--ink);
-      font-size: clamp(2.7rem, 8vw, 5.8rem);
+      font-size: clamp(2.75rem, 7vw, 5.9rem);
       line-height: .98;
       letter-spacing: 0;
     }
 
-    .hero-ja {
+    .hero p {
       max-width: 720px;
-      margin: 20px 0 0;
-      font-size: clamp(1.08rem, 2.2vw, 1.28rem);
-      color: var(--text);
-      line-height: 1.95;
-    }
-
-    .hero-en {
-      max-width: 720px;
-      margin: 10px 0 0;
+      margin: 18px 0 0;
       color: var(--muted);
-      font-size: 1rem;
-      line-height: 1.8;
+      font-size: clamp(1.04rem, 2vw, 1.2rem);
+      line-height: 1.9;
     }
 
     .gallery-section {
-      margin-top: 28px;
-      padding: clamp(22px, 4vw, 36px);
+      margin-top: 30px;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(280px, .7fr) 1fr;
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 22px;
+      padding: 0 4px;
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(1.85rem, 4vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(18px, 2.4vw, 28px);
+    }
+
+    .art-card {
+      overflow: hidden;
       border: 1px solid var(--line);
       border-radius: 20px;
       background: var(--card);
       box-shadow: 0 12px 30px rgba(77, 56, 33, .07);
     }
 
-    .section-head {
-      display: grid;
-      grid-template-columns: minmax(220px, .75fr) 1fr;
-      gap: 24px;
-      align-items: end;
-      margin-bottom: 22px;
-    }
-
-    h2 {
-      margin: 0;
-      color: var(--ink);
-      font-size: clamp(1.75rem, 4vw, 3rem);
-      line-height: 1.1;
-      letter-spacing: 0;
-    }
-
-    .subhead {
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-weight: 700;
-      font-size: 1.02rem;
-    }
-
-    .lead {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.02rem;
-      line-height: 1.85;
-    }
-
-    .portrait-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
-    }
-
-    .portrait-card {
-      display: flex;
-      flex-direction: column;
-      min-height: 100%;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: #fffdf8;
-      text-decoration: none;
-      box-shadow: 0 8px 18px rgba(77, 56, 33, .06);
-      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-    }
-
-    .portrait-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(214, 169, 79, .7);
-      box-shadow: 0 14px 28px rgba(77, 56, 33, .1);
-    }
-
-    .portrait-image {
+    .art-image {
+      display: block;
       aspect-ratio: 4 / 5;
       background: var(--paper-soft);
       overflow: hidden;
+      text-decoration: none;
     }
 
-    .portrait-image img {
+    .art-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      filter: saturate(.98) contrast(.98);
+      filter: saturate(.97) contrast(.98) brightness(1.01);
+      transition: transform .24s ease;
     }
 
-    .portrait-body {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      flex: 1;
-      padding: 15px;
+    .art-card:hover .art-image img {
+      transform: scale(1.018);
     }
 
-    .portrait-body h3 {
+    .art-body {
+      padding: 18px 18px 20px;
+    }
+
+    .art-title {
       margin: 0;
       color: var(--ink);
-      font-size: 1.12rem;
+      font-size: clamp(1.18rem, 2vw, 1.38rem);
       line-height: 1.35;
       letter-spacing: 0;
     }
 
-    .portrait-body .en {
-      margin: -4px 0 0;
+    .meta {
+      display: grid;
+      gap: 4px;
+      margin: 12px 0 0;
       color: var(--muted);
-      font-size: .9rem;
-      line-height: 1.4;
+      font-size: .92rem;
+      line-height: 1.55;
     }
 
-    .portrait-body p {
-      margin: 0;
-      color: var(--muted);
-      font-size: .93rem;
-      line-height: 1.65;
+    .meta span {
+      display: block;
     }
 
-    .view-link {
-      margin-top: auto;
-      padding-top: 8px;
+    .caption {
+      margin: 14px 0 0;
+      color: var(--text);
+      font-size: .96rem;
+      line-height: 1.75;
+    }
+
+    .detail-link {
+      display: inline-block;
+      margin-top: 15px;
       color: #6f5a36;
-      font-size: .9rem;
-      font-weight: 700;
+      font-size: .92rem;
+      font-weight: 800;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(214, 169, 79, .6);
     }
 
     .note {
-      margin: 22px 0 0;
+      margin: 26px 4px 0;
       color: var(--muted);
-      font-size: .95rem;
+      font-size: .96rem;
       line-height: 1.8;
     }
 
     footer {
-      padding: 32px 0 0;
+      padding: 34px 0 0;
       color: var(--muted);
       text-align: center;
       font-size: .9rem;
     }
 
-    @media (max-width: 1080px) {
-      .portrait-grid { grid-template-columns: repeat(4, 1fr); }
+    @media (max-width: 980px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
-    @media (max-width: 860px) {
+    @media (max-width: 760px) {
       .section-head {
         grid-template-columns: 1fr;
         gap: 12px;
       }
-
-      .portrait-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 560px) {
       .wrap {
-        width: min(100% - 24px, 1120px);
+        width: min(100% - 24px, 1180px);
         padding-top: 16px;
       }
 
@@ -265,11 +244,13 @@
       }
 
       .hero,
-      .gallery-section {
+      .art-card {
         border-radius: 16px;
       }
 
-      .portrait-grid { grid-template-columns: 1fr; }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
   <script>
@@ -285,144 +266,172 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
     </header>
 
     <section class="hero" aria-labelledby="gallery-title">
-      <p class="eyebrow">Portrait Gallery</p>
-      <h1 id="gallery-title">Food Life Portraits</h1>
-      <p class="hero-ja">ここは、Food Lifeの街に暮らす住人たちの肖像を並べた静かなアルバムです。誰かの強さ、迷い、やさしさ、小さな失敗が、ひとつずつ街の空気を作っています。</p>
-      <p class="hero-en">A quiet album of Food Life residents. Each portrait holds a small trace of work, kindness, hesitation, and the gentle rhythm of a town you can return to.</p>
+      <p class="eyebrow">Food Life Portrait Gallery</p>
+      <h1 id="gallery-title">街のアルバム</h1>
+      <p>Food Lifeの住人たちを紹介する一覧ではなく、街のどこかで撮られた一枚ずつのポートレートとして眺める場所です。</p>
     </section>
 
-    <section class="gallery-section" aria-labelledby="residents-title">
+    <section class="gallery-section" aria-labelledby="works-title">
       <div class="section-head">
         <div>
-          <h2 id="residents-title">Portraits of the Residents</h2>
-          <p class="subhead">Food Lifeの住人たち</p>
+          <h2 id="works-title">Food Life Portrait Gallery</h2>
         </div>
-        <p class="lead">派手な展示ではなく、街角でふと目が合うようなポートレート。気になる住人を選ぶと、それぞれの詳細ページへ移動できます。</p>
+        <p class="lead">写真の中にあるのは、職業、場所、関係性、そして少しだけ立ち止まった時間。詳細ページへのリンクは残しながら、ここでは画像そのものを主役にしています。</p>
       </div>
 
-      <div class="portrait-grid">
-        <a class="portrait-card" href="./characters/musubiyama.html">
-          <div class="portrait-image">
-            <img src="../generated_characters/approved/20260510_musubi_rikishi.png" alt="むすび山のポートレート">
+      <div class="gallery-grid">
+        <article class="art-card">
+          <a class="art-image" href="./characters/noa.html">
+            <img src="../outputs/images/portraits/20260515_noa_evening_bench_portrait.png" alt="夕方の商店街で予定カードを並べるノア">
+          </a>
+          <div class="art-body">
+            <h3 class="art-title">夕方の商店街で、少しだけ立ち止まるノア</h3>
+            <div class="meta">
+              <span>登場: ノア</span>
+              <span>場所: Food Life商店街のベンチ</span>
+            </div>
+            <p class="caption">最短ルートより、遠くの歌が聞こえる道を気にしている。</p>
+            <a class="detail-link" href="./characters/noa.html">ノアの詳細へ</a>
           </div>
-          <div class="portrait-body">
-            <h3>むすび山</h3>
-            <p class="en">Musubiyama</p>
-            <p>強そうなのに、誰より気弱でやさしいおにぎり力士。</p>
-            <span class="view-link">詳細ページへ</span>
-          </div>
-        </a>
+        </article>
 
-        <a class="portrait-card" href="./characters/nasu-shinshi.html">
-          <div class="portrait-image">
-            <img src="../generated_characters/legendary/nasu_shinshi.png" alt="ナス紳士のポートレート">
+        <article class="art-card">
+          <a class="art-image" href="./characters/morokoshi-joe.html">
+            <img src="../outputs/images/portraits/20260512_morokoshi_joe_street_musician.png" alt="夕方の商店街で歌うもろこしジョー">
+          </a>
+          <div class="art-body">
+            <h3 class="art-title">帰り道に置かれた小さな歌</h3>
+            <div class="meta">
+              <span>登場: もろこしジョー</span>
+              <span>場所: 夕方の商店街</span>
+            </div>
+            <p class="caption">有名になるためではなく、誰かの帰り道に寄り添うために歌う。</p>
+            <a class="detail-link" href="./characters/morokoshi-joe.html">もろこしジョーの詳細へ</a>
           </div>
-          <div class="portrait-body">
-            <h3>ナス紳士</h3>
-            <p class="en">Nasu Gentleman</p>
-            <p>丁寧なお辞儀で、ホテルの空気まで整えようとする紳士。</p>
-            <span class="view-link">詳細ページへ</span>
-          </div>
-        </a>
+        </article>
 
-        <a class="portrait-card" href="./characters/lumi-macaron-ca.html">
-          <div class="portrait-image">
-            <img src="../generated_characters/approved/20260511_lumi_macaron_ca.png" alt="ルミマカロンCAのポートレート">
+        <article class="art-card">
+          <a class="art-image" href="./characters/renkon-oyakata.html">
+            <img src="../outputs/images/portraits/20260512_renkon_oyakata_construction_foreman.png" alt="工事現場で街を支えるレンコン親方">
+          </a>
+          <div class="art-body">
+            <h3 class="art-title">街の足元を支える親方</h3>
+            <div class="meta">
+              <span>登場: レンコン親方</span>
+              <span>場所: Food Life工事現場</span>
+            </div>
+            <p class="caption">目立たない仕事ほど、帰ってこられる街を静かに守っている。</p>
+            <a class="detail-link" href="./characters/renkon-oyakata.html">レンコン親方の詳細へ</a>
           </div>
-          <div class="portrait-body">
-            <h3>ルミマカロンCA</h3>
-            <p class="en">Lumi Macaron CA</p>
-            <p>旅の不安に、ふわっと声をかける二段マカロンCA。</p>
-            <span class="view-link">詳細ページへ</span>
-          </div>
-        </a>
+        </article>
 
-        <a class="portrait-card" href="./characters/poko-waffle.html">
-          <div class="portrait-image">
-            <img src="../generated_characters/approved/20260510_poko_waffle_mailcarrier.png" alt="ぽこワッフルのポートレート">
+        <article class="art-card">
+          <a class="art-image" href="./characters/lumi-macaron-ca.html">
+            <img src="../generated_characters/approved/20260511_lumi_macaron_ca.png" alt="空港で働くルミマカロンCA">
+          </a>
+          <div class="art-body">
+            <h3 class="art-title">次のフライトへ向かうやさしい足音</h3>
+            <div class="meta">
+              <span>登場: ルミマカロンCA</span>
+              <span>場所: Food Life Airport</span>
+            </div>
+            <p class="caption">旅の不安に、少しだけ先回りして声をかける。</p>
+            <a class="detail-link" href="./characters/lumi-macaron-ca.html">ルミマカロンCAの詳細へ</a>
           </div>
-          <div class="portrait-body">
-            <h3>ぽこワッフル</h3>
-            <p class="en">Poko Waffle</p>
-            <p>配達したい気持ちが、手紙ごと自分のマス目に入ってしまう郵便屋。</p>
-            <span class="view-link">詳細ページへ</span>
-          </div>
-        </a>
+        </article>
 
-        <a class="portrait-card" href="./characters/morokoshi-joe.html">
-          <div class="portrait-image">
-            <img src="../generated_characters/approved/20260512_morokoshi_joe_street_musician.png" alt="もろこしジョーのポートレート">
+        <article class="art-card">
+          <a class="art-image" href="./characters/nasu-shinshi.html">
+            <img src="../generated_characters/legendary/nasu_shinshi.png" alt="ホテルで働くナス紳士">
+          </a>
+          <div class="art-body">
+            <h3 class="art-title">ロビーに残るお辞儀の余韻</h3>
+            <div class="meta">
+              <span>登場: ナス紳士</span>
+              <span>場所: ナス紳士ホテル</span>
+            </div>
+            <p class="caption">少しそそっかしくても、丁寧さはちゃんと届く。</p>
+            <a class="detail-link" href="./characters/nasu-shinshi.html">ナス紳士の詳細へ</a>
           </div>
-          <div class="portrait-body">
-            <h3>もろこしジョー</h3>
-            <p class="en">Morokoshi Joe</p>
-            <p>帰り道に、小さな歌を置いていく焼きとうもろこし。</p>
-            <span class="view-link">詳細ページへ</span>
-          </div>
-        </a>
+        </article>
 
-        <a class="portrait-card" href="./characters/afro-broccoli.html">
-          <div class="portrait-image">
-            <img src="../generated_characters/legendary/afro_broccoli.png" alt="アフロブロッコリーのポートレート">
+        <article class="art-card">
+          <a class="art-image" href="./characters/flurina-tarte.html">
+            <img src="../generated_characters/approved/20260514_fruina_tarte_actress.png" alt="撮影現場のフルリーナ・タルト">
+          </a>
+          <div class="art-body">
+            <h3 class="art-title">本番前の光を待つ女優</h3>
+            <div class="meta">
+              <span>登場: フルリーナ・タルト</span>
+              <span>場所: フルリーナ映画撮影現場</span>
+            </div>
+            <p class="caption">スターのまぶしさより、現場への小さな敬意が残る一枚。</p>
+            <a class="detail-link" href="./characters/flurina-tarte.html">フルリーナ・タルトの詳細へ</a>
           </div>
-          <div class="portrait-body">
-            <h3>アフロブロッコリー</h3>
-            <p class="en">Afro Broccoli</p>
-            <p>少し盛りすぎた髪型まで、チャームポイントに変える美容師。</p>
-            <span class="view-link">詳細ページへ</span>
-          </div>
-        </a>
+        </article>
 
-        <a class="portrait-card" href="./characters/blackcoffee-ceo.html">
-          <div class="portrait-image">
-            <img src="../generated_characters/approved/20260511_blackcoffee_ceo.png" alt="ブラックコーヒー社長のポートレート">
+        <article class="art-card">
+          <a class="art-image" href="./characters/blackcoffee-ceo.html">
+            <img src="../generated_characters/approved/20260511_blackcoffee_ceo.png" alt="深夜オフィスのブラックコーヒー社長">
+          </a>
+          <div class="art-body">
+            <h3 class="art-title">深夜のデスクライト</h3>
+            <div class="meta">
+              <span>登場: ブラックコーヒー社長</span>
+              <span>場所: 高層ビル上層階のオフィス</span>
+            </div>
+            <p class="caption">厳しそうな横顔の奥に、終電を気にする優しさがある。</p>
+            <a class="detail-link" href="./characters/blackcoffee-ceo.html">ブラックコーヒー社長の詳細へ</a>
           </div>
-          <div class="portrait-body">
-            <h3>ブラックコーヒー社長</h3>
-            <p class="en">Black Coffee CEO</p>
-            <p>厳しそうな半目で、誰より先に終電を気にしている社長。</p>
-            <span class="view-link">詳細ページへ</span>
-          </div>
-        </a>
+        </article>
 
-        <a class="portrait-card" href="./characters/renkon-oyakata.html">
-          <div class="portrait-image">
-            <img src="../generated_characters/approved/20260512_renkon_oyakata_construction_foreman.png" alt="レンコン親方のポートレート">
+        <article class="art-card">
+          <a class="art-image" href="./characters/afro-broccoli.html">
+            <img src="../generated_characters/legendary/afro_broccoli.png" alt="美容室のアフロブロッコリー">
+          </a>
+          <div class="art-body">
+            <h3 class="art-title">鏡の前の、最高じゃん</h3>
+            <div class="meta">
+              <span>登場: アフロブロッコリー</span>
+              <span>場所: Food Life美容室</span>
+            </div>
+            <p class="caption">少し盛りすぎた髪型も、笑えばちゃんと似合ってくる。</p>
+            <a class="detail-link" href="./characters/afro-broccoli.html">アフロブロッコリーの詳細へ</a>
           </div>
-          <div class="portrait-body">
-            <h3>レンコン親方</h3>
-            <p class="en">Renkon Oyakata</p>
-            <p>街の足元を静かに直し、安心できる帰り道を支える親方。</p>
-            <span class="view-link">詳細ページへ</span>
-          </div>
-        </a>
+        </article>
 
-        <a class="portrait-card" href="./characters/flurina-tarte.html">
-          <div class="portrait-image">
-            <img src="../generated_characters/approved/20260514_fruina_tarte_actress.png" alt="フルリーナ・タルトのポートレート">
+        <article class="art-card">
+          <a class="art-image" href="./characters/poko-waffle.html">
+            <img src="../generated_characters/approved/20260510_poko_waffle_mailcarrier.png" alt="郵便局のぽこワッフル">
+          </a>
+          <div class="art-body">
+            <h3 class="art-title">マス目に残る配達の気配</h3>
+            <div class="meta">
+              <span>登場: ぽこワッフル</span>
+              <span>場所: Food Life郵便局</span>
+            </div>
+            <p class="caption">手紙を届けたい気持ちが、今日も少しだけ先に走る。</p>
+            <a class="detail-link" href="./characters/poko-waffle.html">ぽこワッフルの詳細へ</a>
           </div>
-          <div class="portrait-body">
-            <h3>フルリーナ・タルト</h3>
-            <p class="en">Flurina Tarte</p>
-            <p>スターなのに、現場の小さな気遣いを忘れない映画女優。</p>
-            <span class="view-link">詳細ページへ</span>
-          </div>
-        </a>
+        </article>
 
-        <a class="portrait-card" href="./characters/noa.html">
-          <div class="portrait-image">
-            <img src="../generated_characters/legendary/20260513_noa_milk_pudding_ai.png" alt="ノアのポートレート">
+        <article class="art-card">
+          <a class="art-image" href="./characters/musubiyama.html">
+            <img src="../generated_characters/approved/20260510_musubi_rikishi.png" alt="相撲部屋のむすび山">
+          </a>
+          <div class="art-body">
+            <h3 class="art-title">土俵の前の小さな深呼吸</h3>
+            <div class="meta">
+              <span>登場: むすび山</span>
+              <span>場所: Food Life相撲部屋</span>
+            </div>
+            <p class="caption">大きくて強いのに、やさしさの方が先に出てしまう。</p>
+            <a class="detail-link" href="./characters/musubiyama.html">むすび山の詳細へ</a>
           </div>
-          <div class="portrait-body">
-            <h3>ノア</h3>
-            <p class="en">Noa</p>
-            <p>効率を探していたら、やさしさの場所に迷い込んだミルクプリンAI。</p>
-            <span class="view-link">詳細ページへ</span>
-          </div>
-        </a>
+        </article>
       </div>
 
-      <p class="note">Portrait Galleryは、Food Lifeの街の住人たちを少しずつ増やしていくための静かな入口です。</p>
+      <p class="note">このギャラリーは、作品が増えるたびに少しずつ広がっていくFood Lifeのアルバムです。</p>
     </section>
   </main>
 
