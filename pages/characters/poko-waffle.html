@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ぽこワッフル | Food Life Character Book</title>
+  <meta name="description" content="ぽこワッフルは、Food Lifeの街をぽこぽこと歩いてつなぐワッフル郵便屋。手紙が自分のマス目に入っても、照れながら届け直します。">
+  <link rel="canonical" href="../characters/poko-waffle.html">
+  <meta property="og:title" content="ぽこワッフル | Food Life Character Book">
+  <meta property="og:description" content="配達したい気持ちが強すぎて、手紙まで自分のマス目に入ってしまうワッフル郵便屋。">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../../generated_characters/approved/20260510_poko_waffle_mailcarrier.png">
+  <style>
+    :root {
+      --paper: #fff7e9;
+      --card: rgba(255,255,255,.88);
+      --ink: #362a20;
+      --text: #493c30;
+      --muted: #7a6858;
+      --line: #ead8bd;
+      --waffle: #c9823c;
+      --butter: #f0d36e;
+      --mail: #bd4f46;
+      --cream: #fff1d0;
+      --sky: #b9dbe2;
+      --shadow: 0 18px 48px rgba(96, 61, 26, .12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Yu Gothic", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(201, 130, 60, .18), transparent 30rem),
+        radial-gradient(circle at 88% 8%, rgba(185, 219, 226, .34), transparent 28rem),
+        linear-gradient(180deg, #fff7e9 0%, #f6ecdd 100%);
+      line-height: 1.86;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 26px 18px 58px; }
+    .back { display: inline-flex; margin: 0 0 18px; color: var(--muted); text-decoration: none; font-size: .94rem; border-bottom: 1px solid transparent; }
+    .back:hover { border-color: var(--mail); }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(260px, 410px) 1fr;
+      gap: 30px;
+      align-items: center;
+      padding: clamp(18px, 3vw, 28px);
+      background: rgba(255,255,255,.76);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+    .portrait {
+      aspect-ratio: 9 / 16;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      background: linear-gradient(160deg, #fff1d0, #f5c77a 58%, #f7fbff);
+      display: grid;
+      place-items: center;
+    }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .placeholder { display: none; padding: 28px; text-align: center; color: var(--muted); }
+    .eyebrow { margin: 0 0 8px; color: var(--mail); font-weight: 800; letter-spacing: .02em; }
+    h1 { margin: 0; color: var(--ink); font-size: clamp(2.55rem, 7.3vw, 5.8rem); line-height: 1; letter-spacing: 0; }
+    .en { margin: 5px 0 20px; color: var(--muted); font-size: clamp(1.08rem, 3vw, 1.45rem); }
+    .catch {
+      margin: 0;
+      padding: 15px 17px;
+      border-left: 6px solid var(--mail);
+      border-radius: 14px;
+      background: #fff0d8;
+      color: #493224;
+      font-size: 1.08rem;
+      font-weight: 800;
+      line-height: 1.65;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .chip { padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; background: #fffdf7; color: #5d5043; font-size: .92rem; font-weight: 650; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; margin-top: 22px; }
+    .card { grid-column: span 6; padding: 23px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); box-shadow: 0 10px 24px rgba(96, 61, 26, .07); }
+    .wide { grid-column: span 12; }
+    .note { border-left: 6px solid var(--waffle); }
+    h2 { margin: 0 0 12px; color: var(--ink); font-size: 1.24rem; line-height: 1.35; }
+    h3 { margin: 18px 0 8px; color: var(--ink); font-size: 1.04rem; }
+    p { margin: 0; }
+    p + p { margin-top: 1em; }
+    .english { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); color: #5a493b; }
+    .english h3 { color: #49392c; }
+    ul { margin: 0; padding-left: 1.2rem; }
+    li + li { margin-top: 5px; }
+    .profile { display: grid; grid-template-columns: 8.5rem 1fr; gap: 8px 14px; font-size: .98rem; }
+    .profile dt { color: var(--muted); }
+    .profile dd { margin: 0; font-weight: 700; color: #443528; }
+    .linklist { display: flex; flex-wrap: wrap; gap: 10px; }
+    .linkpill { padding: 10px 13px; border: 1px solid #e4d2b5; border-radius: 12px; background: #fffaf1; color: #684b32; font-weight: 700; text-decoration: none; }
+    .shorts { border-left: 6px solid var(--mail); }
+    .shorts-list { display: grid; gap: 12px; }
+    .shorts-item { padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #fffdf5; }
+    .shorts-item h3 { margin: 0 0 8px; font-size: 1rem; line-height: 1.45; }
+    .shorts-missing { display: inline-flex; margin: 8px 0; padding: 7px 10px; border-radius: 999px; background: #f8efe0; color: #7a6858; font-weight: 800; font-size: .92rem; }
+    .shorts-note { margin: 8px 0 0; color: var(--muted); font-size: .94rem; line-height: 1.65; }
+    .today { border-color: #e3c489; background: linear-gradient(135deg, #fff1d4, #ffffff 68%); }
+    footer { padding: 34px 0 0; color: var(--muted); text-align: center; font-size: .92rem; }
+    @media (max-width: 820px) {
+      .hero { grid-template-columns: 1fr; }
+      .portrait { width: min(100%, 360px); margin: 0 auto; }
+      .card { grid-column: span 12; }
+      .profile { grid-template-columns: 1fr; }
+      h1 { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../index.html">Food Life Character Book TOPへ戻る</a>
+
+    <section class="hero">
+      <div class="portrait">
+        <img src="../../generated_characters/approved/20260510_poko_waffle_mailcarrier.png" alt="ぽこワッフルのポートレート" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="placeholder">ぽこワッフルのポートレート画像表示欄</div>
+      </div>
+      <div>
+        <p class="eyebrow">Food Life Character Book</p>
+        <h1>ぽこワッフル</h1>
+        <p class="en">Poko Waffle</p>
+        <p class="catch">配達したい気持ちが強すぎて、手紙まで自分のマス目に入ってしまう。Food Lifeの街をぽこぽこと歩いてつなぐワッフル郵便屋。</p>
+        <div class="chips">
+          <span class="chip">ワッフル</span>
+          <span class="chip">郵便配達員</span>
+          <span class="chip">赤い郵便バッグ</span>
+          <span class="chip">格子マスの小さな失敗</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card wide note">
+        <h2>Introduction</h2>
+        <p>ぽこワッフルは、Food Lifeの郵便配達員です。</p>
+        <p>四角い焼き色ワッフルの体、くっきりした格子マス、角にのった小さなバター帽子、赤い斜めがけ郵便バッグ。短い足で商店街をぽこぽこと歩き、今日も手紙や小包を届けています。</p>
+        <p>まじめで時間に正確ですが、ワッフルのマス目が少し便利すぎるせいで、封筒や切手や消印がよく自分の体に入ってしまいます。</p>
+        <p>けれど、ぽこワッフルはその小さな失敗を、誰かを責める理由にはしません。困り笑いをしながら、もう一度宛先を確かめて、大切な気持ちをちゃんと届けます。</p>
+        <div class="english">
+          <h3>English Version</h3>
+          <p>Poko Waffle is a mail carrier in Food Life.</p>
+          <p>He has a square golden-brown waffle body, clear grid pockets, a tiny butter cap on one corner, and a red crossbody mail bag. With his short little steps, he walks through the shopping street and delivers letters and parcels every day.</p>
+          <p>He is serious and punctual, but his waffle grid is a little too useful. Envelopes, stamps, and postmarks often end up on his own body by mistake.</p>
+          <p>Poko does not turn those small mistakes into blame. He smiles shyly, checks the address again, and keeps trying to deliver each message with care.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>基本プロフィール / Profile</h2>
+        <dl class="profile">
+          <dt>食品</dt><dd>バターのせ四角ワッフル / Square waffle with butter</dd>
+          <dt>職業</dt><dd>郵便配達員 / Mail carrier</dd>
+          <dt>場所</dt><dd>Food Life郵便局、商店街の配達ルート</dd>
+          <dt>見た目</dt><dd>焼き色の四角い体、格子マス、赤い郵便バッグ</dd>
+          <dt>口癖</dt><dd>「ぽこっと、お届けです」 / A gentle delivery phrase</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h2>街での評判</h2>
+        <p>ぽこワッフルが赤いバッグを揺らして歩いてくると、商店街の住人たちは少しだけ顔を上げます。大事な書類も、応援カードも、小さな忘れ物も、彼はできるだけ丁寧に届けようとします。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>When Poko Waffle walks by with his red mail bag, the town looks up for a moment. Important documents, support cards, and tiny forgotten items all pass through his careful hands.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>性格</h2>
+        <p>まじめで、時間に正確で、少しあわてやすい郵便屋です。失敗するとすぐに困り笑いをしますが、仕事を投げ出すことはありません。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>He is serious, punctual, and a little easily flustered. When he makes a mistake, he smiles shyly, but he never gives up on the delivery.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>小さなこだわり</h2>
+        <ul>
+          <li>配達前に、封筒の角をそろえる。</li>
+          <li>赤い郵便バッグの口を、毎回きちんと閉じる。</li>
+          <li>消印スタンプは両手でまっすぐ持つ。</li>
+          <li>雨の日は、封筒より先にバッグへ透明カバーをかける。</li>
+        </ul>
+        <div class="english">
+          <h3>English</h3>
+          <p>He lines up envelope corners, closes his red mail bag carefully, holds the postmark stamp with both hands, and protects the bag first on rainy days.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>よくある小さな失敗</h2>
+        <ul>
+          <li>封筒をポストに入れる前に、自分のワッフル格子へすぽっと入ってしまう。</li>
+          <li>消印スタンプが、封筒ではなく全マスにつく。</li>
+          <li>切手がメープルのツヤでほっぺに貼りつく。</li>
+          <li>小包ラベルを読むはずのスキャナーが、ワッフル格子を読んでしまう。</li>
+        </ul>
+        <div class="english">
+          <h3>English</h3>
+          <p>Letters slip into his waffle grid, postmarks cover his squares, stamps stick to his cheek, and scanners sometimes read him instead of a parcel label.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>好きなもの</h2>
+        <p>赤い郵便バッグ、白い封筒、丸い消印スタンプ、雨上がりの配達道、夕方の商店街、受け取った住人の小さな「ありがとう」。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>He likes his red mail bag, white envelopes, round postmark stamps, delivery routes after rain, the evening shopping street, and a small "thank you."</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>苦手なもの</h2>
+        <p>急ぎすぎる配達、濡れた封筒、宛先が見えない荷物、格子に入りすぎたメモ、自分が届ける前に誰かを不安にさせてしまうこと。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>He struggles with rushed delivery, wet envelopes, unclear parcels, too many notes stuck in his grid, and making someone worry before he arrives.</p>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>働いている場所</h2>
+        <p>ぽこワッフルの仕事場は、Food Life郵便局と商店街の配達ルートです。郵便局のカウンター、仕分け棚、赤いポスト、住宅街の小さな集合ポスト、ホテルや美容室への小包便。街のあちこちに、ぽこワッフルの小さな足音が残っています。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>Poko works at the Food Life Post Office and across the town's delivery routes. His day moves between counters, sorting shelves, red mailboxes, apartment mail slots, hotels, salons, airports, offices, and the sumo stable.</p>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>Food Lifeでの役割</h2>
+        <p>ぽこワッフルは、Food Lifeの「小さな気持ちを運ぶ人」です。封筒や小包だけでなく、応援カード、予約カード、忘れ物、誰かの小さな気づかいを街の別の誰かへ届けます。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>Poko Waffle carries small feelings through Food Life: support cards, appointment notes, forgotten items, and gentle thoughts from one resident to another.</p>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>関係キャラクター</h2>
+        <div class="linklist">
+          <a class="linkpill" href="morokoshi-joe.html">もろこしジョー</a>
+          <a class="linkpill" href="musubiyama.html">むすび山</a>
+          <a class="linkpill" href="afro-broccoli.html">アフロブロッコリー</a>
+          <a class="linkpill" href="nasu-shinshi.html">ナス紳士</a>
+          <a class="linkpill" href="lumi-macaron-ca.html">ルミマカロンCA</a>
+          <a class="linkpill" href="noa.html">ノア</a>
+        </div>
+        <div class="english">
+          <h3>English</h3>
+          <p>Morokoshi Joe receives support cards. Musubiyama receives parcels at the sumo stable. Afro Broccoli gets appointment cards. Nasu Gentleman receives hotel mail. Lumi Macaron helps with airport parcels. Noa helps organize routes while learning from Poko's gentle detours.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>関連場所</h2>
+        <div class="linklist">
+          <span class="linkpill">Food Life郵便局</span>
+          <span class="linkpill">Food Life商店街</span>
+          <span class="linkpill">アフロブロッコリー美容室</span>
+          <span class="linkpill">むすび相撲部屋</span>
+          <span class="linkpill">ナス紳士ホテル</span>
+          <span class="linkpill">Food Life Airport</span>
+        </div>
+      </article>
+
+      <article class="card shorts">
+        <h2>登場Shorts</h2>
+        <div class="shorts-list">
+          <div class="shorts-item">
+            <h3>ぽこワッフル、全マスに消印される</h3>
+            <span class="shorts-missing">現時点では動画リンク未登録</span>
+            <p class="shorts-note">ぽこワッフルが消印スタンプを押した瞬間、封筒ではなく自分のワッフル格子すべてに丸い消印が並んでしまう。怖くない、痛くない、郵便屋らしい小さな仕事ミス。</p>
+            <div class="english">
+              <h3>English</h3>
+              <p>At the moment Poko Waffle uses the postmark stamp, the round marks appear across his waffle grid instead of the envelope.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>小さな日常エピソード</h2>
+        <p>夕方の商店街で、ぽこワッフルは赤いバッグから一通の封筒を取り出しました。</p>
+        <p>宛先を確かめて、ポストへ入れようとした瞬間、封筒の角が自分の格子マスにすぽっと入ります。ぽこワッフルは一秒だけ固まり、「あれ、そこはポストじゃないです」と小さく言いました。</p>
+        <p>近くのクッキー店主が笑って、ポストのふたを開けてくれます。ぽこワッフルは照れながら封筒を取り出し、今度こそ、きちんと届けました。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>In the evening shopping street, Poko Waffle took one envelope from his red bag.</p>
+          <p>He checked the address and moved toward the mailbox. Just then, the corner of the envelope slipped neatly into his own waffle grid.</p>
+          <p>A cookie shopkeeper smiled and opened the real mailbox. Poko pulled the envelope out shyly and delivered it properly this time.</p>
+        </div>
+      </article>
+
+      <article class="card wide today">
+        <h2>Today's Food Life</h2>
+        <p>夕方の配達で、ぽこワッフルのマス目に封筒が一通すぽっと入った。クッキー店主が本物のポストを開けると、彼は照れて笑い、今度こそまっすぐ届けた。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>During an evening delivery, an envelope slipped into Poko Waffle's grid. A cookie shopkeeper opened the real mailbox, and Poko smiled shyly before delivering it properly.</p>
+        </div>
+      </article>
+    </section>
+
+    <footer>Food Life Character Book - small letters, gentle routes, warm deliveries.</footer>
+  </main>
+</body>
+</html>
