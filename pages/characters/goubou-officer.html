@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ごうぼう巡査 | Food Life Character Book</title>
+  <meta name="description" content="ごうぼう巡査は、Food Life商店街の小さな交番で働く、強くて礼儀正しい若手警察官。レンコン親方を尊敬し、街の不安を静かに受け止めます。">
+  <link rel="canonical" href="./goubou-officer.html">
+  <meta property="og:title" content="ごうぼう巡査 | Food Life Character Book">
+  <meta property="og:description" content="強い腕より、先に差し出す手。交番のやさしい若手巡査。">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../../generated_characters/approved/20260515_goubou_police_officer.png">
+  <style>
+    :root {
+      --paper: #fffaf0;
+      --card: rgba(255,255,255,.86);
+      --ink: #34281f;
+      --text: #493a30;
+      --muted: #76685b;
+      --line: #eadcc8;
+      --blue: #5d8fbc;
+      --blue-soft: #dbeaf4;
+      --brown: #8a6346;
+      --cream: #f7ead5;
+      --lamp: #f2c767;
+      --shadow: 0 18px 50px rgba(65, 50, 35, .12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Yu Gothic", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(93, 143, 188, .18), transparent 32rem),
+        radial-gradient(circle at 88% 8%, rgba(242, 199, 103, .18), transparent 28rem),
+        linear-gradient(180deg, #fff8eb 0%, #f4eee5 100%);
+      line-height: 1.82;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 18px 56px; }
+    .back { display: inline-flex; margin: 0 0 18px; color: var(--muted); text-decoration: none; font-size: .94rem; border-bottom: 1px solid transparent; }
+    .back:hover { border-color: var(--blue); }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(260px, 410px) 1fr;
+      gap: 28px;
+      align-items: center;
+      padding: 26px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+    .portrait {
+      aspect-ratio: 9 / 16;
+      border-radius: 22px;
+      overflow: hidden;
+      background: linear-gradient(160deg, var(--blue-soft), #fffaf2);
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+    }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .portrait .placeholder { display: none; padding: 28px; text-align: center; color: var(--muted); }
+    .eyebrow { color: var(--blue); font-weight: 800; letter-spacing: .02em; margin: 0 0 8px; }
+    h1 { font-size: clamp(2.4rem, 7vw, 5.4rem); line-height: 1; margin: 8px 0 4px; letter-spacing: 0; color: var(--ink); }
+    .en { font-size: clamp(1.1rem, 3vw, 1.6rem); color: var(--muted); margin: 0 0 18px; }
+    .catch { font-size: 1.12rem; font-weight: 800; background: #eef6fb; border-left: 6px solid var(--blue); padding: 14px 16px; border-radius: 14px; color: #314154; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .chip { padding: 7px 12px; border-radius: 999px; background: #f7f0e5; border: 1px solid var(--line); font-size: .92rem; color: var(--muted); font-weight: 650; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; margin-top: 22px; }
+    .card {
+      grid-column: span 6;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 10px 24px rgba(65, 50, 35, .07);
+    }
+    .wide { grid-column: span 12; }
+    .note { border-left: 6px solid var(--blue); }
+    h2 { font-size: 1.25rem; margin: 0 0 12px; color: var(--ink); line-height: 1.35; }
+    h3 { margin: 18px 0 8px; color: var(--ink); font-size: 1.04rem; }
+    p { margin: 0; }
+    p + p { margin-top: 1em; }
+    ul { padding-left: 1.2rem; margin: 0; }
+    li + li { margin-top: 5px; }
+    .english {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: #514331;
+    }
+    .profile { display: grid; grid-template-columns: 8.5rem 1fr; gap: 8px 14px; font-size: .98rem; }
+    .profile dt { color: var(--muted); }
+    .profile dd { margin: 0; font-weight: 700; color: #40321f; }
+    .today { background: linear-gradient(135deg, #fff2c8, #ffffff 66%); border-color: #f1d989; }
+    .linklist { display: flex; flex-wrap: wrap; gap: 10px; }
+    .linkpill { padding: 10px 13px; border-radius: 12px; background: #f2f7fb; border: 1px solid #d5e5f0; color: #3e5970; font-weight: 700; text-decoration: none; }
+    .shorts { border-left: 6px solid var(--brown); }
+    .shorts-list { display: grid; gap: 12px; }
+    .shorts-item { padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #fffaf2; }
+    .shorts-item h3 { margin: 0 0 8px; font-size: 1rem; line-height: 1.45; }
+    .shorts-link { display: inline-flex; margin: 8px 0; color: #755737; font-weight: 800; text-decoration: none; border-bottom: 1px solid rgba(117, 87, 55, .28); }
+    .shorts-missing { display: inline-flex; margin: 8px 0; padding: 7px 10px; border-radius: 999px; background: #f7f0e5; color: var(--muted); font-size: .9rem; font-weight: 700; }
+    .shorts-date { margin: 6px 0 0; color: var(--muted); font-size: .88rem; font-weight: 700; }
+    .shorts-note { margin: 8px 0 0; color: var(--muted); font-size: .94rem; line-height: 1.65; }
+    footer { color: var(--muted); text-align: center; padding: 34px 0 0; font-size: .92rem; }
+    @media (max-width: 820px) {
+      .hero { grid-template-columns: 1fr; padding: 18px; }
+      .portrait { max-width: 360px; margin: 0 auto; width: 100%; }
+      .card { grid-column: span 12; }
+      .profile { grid-template-columns: 1fr; }
+      h1 { font-size: 3rem; }
+    }
+  </style>
+  <script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../index.html">Food Life Character Book TOPへ戻る</a>
+
+    <section class="hero">
+      <div class="portrait">
+        <img src="../../generated_characters/approved/20260515_goubou_police_officer.png" alt="ごうぼう巡査のポートレート" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="placeholder">ごうぼう巡査のポートレート画像表示欄</div>
+      </div>
+      <div>
+        <p class="eyebrow">Food Life Character Book</p>
+        <h1>ごうぼう巡査</h1>
+        <p class="en">Goubou Officer</p>
+        <p class="catch">強い腕より、先に差し出す手。レンコン親方に育てられた、交番のやさしい若手巡査。</p>
+        <div class="chips">
+          <span class="chip">ごぼう</span>
+          <span class="chip">交番勤務</span>
+          <span class="chip">礼儀正しい</span>
+          <span class="chip">街の安心</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card wide note">
+        <h2>Introduction</h2>
+        <p>ごうぼう巡査は、Food Life商店街の小さな交番で働く若い警察官です。</p>
+        <p>背が高く、体も強く、学生時代は柔道で一番になったほどの実力があります。けれど、その強さを誰かに見せつけることはありません。</p>
+        <p>困っている住人を見つけると、まず少し膝を曲げて目線を合わせ、「大丈夫です。ゆっくりでいいです」と声をかけます。</p>
+        <p>レンコン親方は、ごうぼう巡査に礼と受け身、そして「足元を見ること」を教えた大恩人です。ごうぼう巡査は今でも、親方のように街の安心を支えたいと思っています。</p>
+        <div class="english">
+          <h3>English Version</h3>
+          <p>Goubou Officer is a young police officer who works at a small police box in the Food Life shopping street.</p>
+          <p>He is tall, strong, and once became the best in judo during his school days. But he never uses that strength to intimidate anyone.</p>
+          <p>When he sees a resident in trouble, he bends his knees a little, meets their eyes, and says, “It’s all right. We can take it slowly.”</p>
+          <p>Renkon Oyakata taught him bowing, falling safely, and looking carefully at the ground beneath everyone’s feet. Goubou Officer still hopes to support the town’s sense of safety in the same gentle way.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>基本プロフィール / Profile</h2>
+        <dl class="profile">
+          <dt>食品</dt><dd>ごぼう / Burdock root</dd>
+          <dt>職業</dt><dd>交番勤務の若手警察官 / Young police box officer</dd>
+          <dt>主な場所</dt><dd>ごうぼう交番 / Goubou Police Box</dd>
+          <dt>口癖</dt><dd>まず、深呼吸しましょう / First, let’s take a deep breath.</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h2>街での評判</h2>
+        <p>商店街の住人たちは、ごうぼう巡査を見ると少し安心します。青い帽子と白い手袋は、困った時に寄っていい場所の目印です。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>The residents feel a little safer when they see him. His blue cap and white gloves quietly mark a place where it is all right to ask for help.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>性格</h2>
+        <p>真面目で礼儀正しく、まず一礼してから話を聞きます。強さは持っていますが、それは誰かを支えるためのものです。</p>
+        <p>小さな食品キャラには歩幅を合わせ、迷っている住人には急がせず、横に並んで歩きます。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>He is earnest and polite, and he listens after a respectful bow. His strength exists to support others.</p>
+          <p>He matches his pace to smaller food characters and walks beside residents who feel lost, never rushing them.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>小さなこだわり</h2>
+        <p>交番ノートの角をそろえること。白手袋をきれいにたたむこと。横断歩道を見る時、必ず足元から確認すること。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>He aligns the corners of his police box notebook, folds his white gloves neatly, and always checks the ground first at a crosswalk.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>よくある小さな失敗</h2>
+        <ul>
+          <li>背筋を伸ばしすぎて、青い警察帽が交番入口の低いのれんに引っかかる。</li>
+          <li>落とし物を返す時に礼が深すぎて、袋だけが相手の手元まで滑る。</li>
+          <li>交通誘導棒がごぼうの縦筋にぴたっと沿って、本人だけ気づかない。</li>
+        </ul>
+        <div class="english">
+          <h3>English</h3>
+          <p>His cap catches on the low curtain, lost-item pouches slide forward during his deep bow, and his traffic baton sometimes lines up perfectly with his burdock-root grooves.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>好きなもの</h2>
+        <p>交番前の小さなランプ、夕方の見回り、きれいに畳んだ白手袋、迷子が安心して笑う瞬間、レンコン親方の静かな助言。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>The small lamp outside the police box, evening patrols, neatly folded white gloves, a lost child smiling with relief, and quiet advice from Renkon Oyakata.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>苦手なもの</h2>
+        <p>褒められると姿勢が正しくなりすぎます。レンコン親方の話題になると、尊敬で直立しすぎて帽子がどこかに当たりそうになります。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>When praised, he stands a little too straight. When someone mentions Renkon Oyakata, his respect makes him straighten up so much that his cap nearly bumps into something.</p>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>働いている場所 / Workplace</h2>
+        <p>ごうぼう交番は、Food Life商店街の角にある小さく明るい交番です。怖い場所ではなく、迷子、落とし物、道案内、夕方の見回りを受け止める、街の安心の入口です。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>Goubou Police Box is a small, bright police box on the corner of the Food Life shopping street. It is not a frightening place. It is an entrance to safety for lost children, lost items, directions, and quiet evening patrols.</p>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <h2>Food Lifeでの役割</h2>
+        <p>ごうぼう巡査は、街の不安を大きくしない人です。困りごとを事件にするのではなく、落ち着いて話せる時間に変えていきます。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>Goubou Officer keeps small worries from growing larger. He does not turn trouble into a crisis. He turns it into a calm moment where someone can speak.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>関連場所 / Places</h2>
+        <div class="linklist">
+          <span class="linkpill">ごうぼう交番</span>
+          <span class="linkpill">Food Life商店街</span>
+          <span class="linkpill">横断歩道</span>
+          <span class="linkpill">レンコン親方の工事現場</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>関連キャラクター / Relationships</h2>
+        <div class="linklist">
+          <a class="linkpill" href="renkon-oyakata.html">レンコン親方</a>
+          <a class="linkpill" href="musubiyama.html">むすび山</a>
+          <a class="linkpill" href="poko-waffle.html">ぽこワッフル</a>
+          <a class="linkpill" href="morokoshi-joe.html">もろこしジョー</a>
+        </div>
+      </article>
+
+      <article class="card wide shorts">
+        <h2>登場Shorts</h2>
+        <div class="shorts-list" data-character="ごうぼう巡査">
+          <div class="shorts-item">
+            <span class="shorts-missing">登場Shortsを読み込み中</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card wide today">
+        <h2>今日のFood Life / Today's Food Life</h2>
+        <p>夕方、ごうぼう巡査は交番前のランプを点けた。迷子のミニおにぎりが小さく手を上げると、巡査は膝を曲げて目線を合わせ、「まず、深呼吸しましょう」とやさしく言った。</p>
+        <div class="english">
+          <h3>English</h3>
+          <p>In the evening, Goubou Officer turned on the small lamp outside the police box. When a lost little onigiri raised its hand, he bent his knees to meet its eyes and gently said, “First, let’s take a deep breath.”</p>
+        </div>
+      </article>
+    </section>
+    <footer>Food Life Character Book - gentle lives, small work, warm streets.</footer>
+  </main>
+  <script src="../assets/character-shorts.js?v=20260516-2" defer></script>
+</body>
+</html>
